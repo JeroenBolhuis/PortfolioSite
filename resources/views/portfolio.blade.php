@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio')
+@section('title', __('Portfolio'))
 
 @push('styles')
   <style>
@@ -13,10 +13,9 @@
   </style>
 @endpush
 
-
 @section('content')
 
-  <h1 class="uppercase text-center my-24 text-6xl text-white">My work</h1>
+  <h1 class="uppercase text-center my-24 text-6xl text-white">{{ __('My work') }}</h1>
 
   <div class="grid px-4 md:px-80">
     @foreach ($projects as $project)
@@ -25,8 +24,8 @@
           <div class="group relative flex flex-col">
             <img src="{{ asset($project['src']) }}" class="w-full h-auto rounded-3xl shadow-lg">
             <div class="absolute inset-0 bg-black bg-opacity-50 p-4 flex flex-col justify-end">
-              <p class="text-white text-4xl md:text-5xl transition-all duration-300 transform translate-y-[50%] group-hover:translate-y-[-15%]">{{ $project['title'] }}</p>
-              <p class="text-white text-xl md:text-xl opacity-0 transition-all duration-300 transform group-hover:opacity-100">{{ $project['subtitle'] }}</p>
+              <p class="text-white text-4xl md:text-5xl transition-all duration-300 transform translate-y-[50%] group-hover:translate-y-[-15%]">{{ __($project['title']) }}</p>
+              <p class="text-white text-xl md:text-xl opacity-0 transition-all duration-300 transform group-hover:opacity-100">{{ __($project['subtitle']) }}</p>
             </div>
           </div>
         </div>

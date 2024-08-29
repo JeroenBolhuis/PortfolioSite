@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Email</title>
+    <title>{{ __('Contact Email') }}</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,24 +47,23 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">EfficiënC</div>
+        <div class="header">{{ __('EfficiënC') }}</div>
         <div class="content">
             <div class="info">
-                Beste,
+                {{ __('Dear,') }}
                 <br><br>
-                De eerste stap naar minder zorgen en hogere efficiëntie voor uw bedrijf is genomen!
+                {{ __('The first step towards less stress and higher efficiency for your business has been taken!') }}
                 <br><br>
-                Ik zou graag een intakegesprek willen plannen om onze mogelijkheden samen te bespreken.
-                Hiervoor is het handig als we een Teams-call plannen.
+                {{ __('I would like to schedule an intake meeting to discuss our possibilities together. For this, it would be useful to plan a Teams call.') }}
                 <br><br>
-                Zou u kunnen laten weten wanneer dit het beste voor u uitkomt?
+                {{ __('Could you please let us know when this would be most convenient for you?') }}
                 <br><br>
-                Ik hoor graag nog van u.
+                {{ __('I look forward to hearing from you.') }}
             </div>
         </div>
         <div class="footer">
-            Met vriendelijke groet,<br>
-            Jeroen Bolhuis van EfficiënC
+            {{ __('Kind regards,') }}<br>
+            {{ __('Jeroen Bolhuis from EfficiënC') }}
         </div>
     </div>
 </body>

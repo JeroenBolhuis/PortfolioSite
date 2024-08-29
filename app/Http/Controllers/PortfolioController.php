@@ -8,29 +8,14 @@ class PortfolioController extends Controller
 {
     public function index()
     {
-        // You can pass data to the view if needed, e.g., projects.
+        // Localize all titles and subtitles using the __('') helper
         $projects = [
-            ['src' => 'storage/Hetkoppel.png', 'title' => 'Website builder', 'subtitle' => 'Voor studievereniging het koppel'],
-            ['src' => 'storage/Degoudendraak.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/Degoudendraak2.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/header.png', 'title' => 'Test item', 'subtitle' => 'Only for testing purposes'],
-            ['src' => 'storage/macbook.svg', 'title' => 'Test item2', 'subtitle' => 'Only for testing purposes2'],
+            ['src' => 'storage/Hetkoppel.png', 'title' => __('Website builder'), 'subtitle' => __('For the student association Het Koppel')],
+            ['src' => 'storage/Degoudendraak.png', 'title' => __('Chinese restaurant'), 'subtitle' => __('With POS system, restaurant tablets, and more')],
+            ['src' => 'storage/Degoudendraak2.png', 'title' => __('Chinese restaurant'), 'subtitle' => __('With POS system, restaurant tablets, and more')],
+            ['src' => 'storage/header.png', 'title' => __('Test item'), 'subtitle' => __('Only for testing purposes')],
+            ['src' => 'storage/macbook.svg', 'title' => __('Test item 2'), 'subtitle' => __('Only for testing purposes 2')],
             // Add more items as needed
-            ['src' => 'storage/Hetkoppel.png', 'title' => 'Website builder', 'subtitle' => 'Voor studievereniging het koppel'],
-            ['src' => 'storage/Degoudendraak.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/Degoudendraak2.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/header.png', 'title' => 'Test item', 'subtitle' => 'Only for testing purposes'],
-            ['src' => 'storage/macbook.svg', 'title' => 'Test item2', 'subtitle' => 'Only for testing purposes2'],
-            ['src' => 'storage/Hetkoppel.png', 'title' => 'Website builder', 'subtitle' => 'Voor studievereniging het koppel'],
-            ['src' => 'storage/Degoudendraak.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/Degoudendraak2.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/header.png', 'title' => 'Test item', 'subtitle' => 'Only for testing purposes'],
-            ['src' => 'storage/macbook.svg', 'title' => 'Test item2', 'subtitle' => 'Only for testing purposes2'],
-            ['src' => 'storage/Hetkoppel.png', 'title' => 'Website builder', 'subtitle' => 'Voor studievereniging het koppel'],
-            ['src' => 'storage/Degoudendraak.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/Degoudendraak2.png', 'title' => 'Chinees restaurant', 'subtitle' => 'Met kassa systeem, restaurant tablets, en meer'],
-            ['src' => 'storage/header.png', 'title' => 'Test item', 'subtitle' => 'Only for testing purposes'],
-            ['src' => 'storage/macbook.svg', 'title' => 'Test item2', 'subtitle' => 'Only for testing purposes2'],
         ];
 
         return view('portfolio', compact('projects'));
