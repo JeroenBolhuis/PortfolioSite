@@ -18,8 +18,8 @@ class HomeController extends Controller
         $validated = $request->validate([
             'email' => 'required|email',
         ],[
-            'email.required' => __('validation.email_required'),
-            'email.email'    => __('validation.email_invalid'),
+            'email.required' => __('messages.email_required'),
+            'email.email'    => __('messages.email_invalid'),
         ]);
         
         $email = $validated['email'];
@@ -32,7 +32,7 @@ class HomeController extends Controller
         });
     
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Je ontvangt binnenkort meer informatie!');
+        return redirect()->back()->with('success', __('messages.info_received'));
     }
     
 }
