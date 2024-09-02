@@ -6,7 +6,11 @@ module.exports = {
     // Add other paths if you have components or JS files using Tailwind classes
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: '#0f0214',  // Define your custom color here
+      },
+    },
   },
   plugins: [],
 }
