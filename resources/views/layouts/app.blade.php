@@ -40,7 +40,9 @@
                             </a>
                         </li>
                     @endforeach
-                    @include('partials/language_switcher')
+                    <div class="hidden md:block">
+                        @include('partials.language_switcher')
+                    </div>
                 </ul>
             </div>  
         </div>

@@ -16,7 +16,10 @@ class HomeController extends Controller
     {
         // Validate the form data
         $validated = $request->validate([
-            'email' => 'required|email|max:255',
+            'email' => 'required|email',
+        ],[
+            'email.required' => __('validation.email_required'),
+            'email.email'    => __('validation.email_invalid'),
         ]);
         
         $email = $validated['email'];
