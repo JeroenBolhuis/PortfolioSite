@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', __('EfficiënC'))</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
     <script>document.documentElement.classList.add('js')</script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -13,7 +14,7 @@
     </script>
     @stack('styles')
 </head>
-<body class="flex flex-col text-indigo-400" style="background-image: url('{{ asset('storage/header.png') }}');background-attachment: fixed;">
+<body class="flex flex-col text-indigo-400" style="background-image: url('{{ secure_asset('images/header.png') }}');background-attachment: fixed;">
     <nav class="bg-main fixed w-full z-20 top-0 start-0 border-b border-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -58,7 +59,7 @@
         </div>
     </footer>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- <script src="{{ secure_asset('js/app.js') }}"></script> -->
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 </html>

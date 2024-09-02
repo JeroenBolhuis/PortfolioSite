@@ -57,7 +57,7 @@
   <!--Right Col-->
   <div class="w-full xl:w-3/5 p-12 overflow-hidden">
     <a href="portfolio">
-    <img class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-500 hover:rotate-0" src="{{ asset('storage/macbook.svg') }}" alt="{{ __('Macbook Image') }}" />
+    <img class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-500 hover:rotate-0" src="{{ asset('images/macbook.svg') }}" alt="{{ __('Macbook Image') }}" />
     </a>
   </div>
 @endsection
