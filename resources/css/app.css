@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.masonry-grid {
+    column-gap: 2rem;
+    column-count: 1;
+}
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+    .masonry-grid {
+        column-count: 2;
+}
+}
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}

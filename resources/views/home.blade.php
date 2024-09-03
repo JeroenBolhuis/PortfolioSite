@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-<!-- section('title', __('Home')) -->
-
 @section('content')
 <!--Main-->
 <div class="container px-8 xl:px-0 pt-18 md:pt-36  mx-auto flex flex-wrap flex-col md:flex-row items-center">
@@ -39,42 +37,9 @@
   </div>
 </div>
 @endsection
-
 @push('styles')
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 @endpush
 @push('scripts')
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <script>
-      window.addEventListener('load', function() {
-        console.log('load');
-        var target = document.getElementById('calendar-container');
-        var label = @json(__('Make an appointment'));
-        calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3L2W-jtuGZGEAPef1y57HPVol19JEf08SWMKHsTp2jKdEhhKvirag_iTLSujEQrZmAGcb1w_O7?gv=true',
-          color: '#039BE5',
-          label: label,
-          target: target,
-        });
-
-        // After the button is loaded, apply Tailwind-like styles
-        const button = document.querySelector('.qxCTlb');
-        if (button) {
-          button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'focus:ring', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'w-full', 'md:w-auto');
-          button.style.setProperty('padding', '1rem 1.5rem', 'important');
-        }
-        // Add an event listener for the 'click' event
-        button.addEventListener('click', function() {            
-          setTimeout(() => {
-            const cont = document.querySelector('.hur54b');
-            if (cont) {
-              if (window.innerWidth < 768) { // only change padding on mobile
-                cont.style.setProperty('padding', '5rem 0.75rem 2rem 0.75rem', 'important');
-              }
-            }
-          }, 0);
-        });
-      });
-    </script>
 @endpush
-

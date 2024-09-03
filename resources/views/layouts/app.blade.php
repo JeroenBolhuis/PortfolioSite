@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', __('EfficiënC'))</title>
-    @vite('resources/css/app.css')
-    @vite('resources/js/app.js')  
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            TAOS.init();
-        });
-    </script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
 <body class="flex flex-col text-indigo-400" style="background-image: url('{{ asset('images/header.png') }}'); background-size: cover;">
@@ -50,7 +43,6 @@
     </nav>
     <main class="min-h-screen py-24">
         @yield('content')
-        @stack('scripts')
     </main>
 
     <footer class="bg-gray-800 text-white py-4 mt-auto">
@@ -58,10 +50,6 @@
             <p>&copy; {{ date('Y') }} {{ __('EfficiënC') }}. {{ __('All rights reserved.') }}</p>
         </div>
     </footer>
-    
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    @stack('scripts')
 </body>
 </html>
