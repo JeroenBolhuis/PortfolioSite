@@ -69,8 +69,8 @@
             const cont = document.querySelector('.hur54b');
             if (cont) {
               if (window.innerWidth < 768) { // only change padding on mobile
-                cont.style.setProperty('padding', '5rem 1rem 2rem 1rem', 'important');
-              } 
+                cont.style.setProperty('padding', '5rem 0.75rem 2rem 0.75rem', 'important');
+              }
             }
           }, 0);
         });
