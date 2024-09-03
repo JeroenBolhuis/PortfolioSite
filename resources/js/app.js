@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var changedstyles = false;
                 while (!changedstyles) {
                     if (button) {
-                        button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'focus:ring', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'w-full', 'md:w-auto');
+                        button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'rounded', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'text-wrap', 'w-full', 'md:w-auto');
                         button.style.setProperty('padding', '1rem 1.5rem', 'important');
                         changedstyles = true;
                     }

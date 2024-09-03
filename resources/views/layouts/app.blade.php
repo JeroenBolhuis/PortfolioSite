@@ -27,7 +27,8 @@
                     @foreach([
                         ['name' => __('Home'), 'url' => '/', 'active' => request()->is('/')],
                         ['name' => __('Portfolio'), 'url' => '/portfolio', 'active' => request()->is('portfolio')],
-                        ['name' => __('About'), 'url' => '/about', 'active' => request()->is('about')]
+                        ['name' => __('About'), 'url' => '/about', 'active' => request()->is('about')],
+                        ['name' => __('Contact'), 'url' => '/contact', 'active' => request()->is('contact')]
                     ] as $item)
                         <li>
                             <a href="{{ $item['url'] }}" class="block py-2 px-3 rounded md:p-0 {{ $item['active'] ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700 hover:bg-gray-700 text-gray-900 md:text-gray-50' }}">

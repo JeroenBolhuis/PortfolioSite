@@ -23,7 +23,15 @@
           {{ __('Take the next step for your business!') }}
         </label>
       </div>
-      <div id="calendar-container"></div>
+      <div class="flex flex-col md:flex-row md:items-center">
+        <div id="calendar-container"></div>
+        <div class="flex flex-col md:flex-row items-center">
+          <span class="text-white my-1 md:mb-0 md:mx-4">{{ __('or') }}</span>
+          <a href="{{ route('contact') }}" class="inline-block bg-gray-600 hover:bg-gray-700 text-white font-bold py-1 md:py-4 px-6 rounded-lg transition duration-300 text-center w-full md:w-auto">
+            {{ __('Contact Me') }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <!--Right Col-->
