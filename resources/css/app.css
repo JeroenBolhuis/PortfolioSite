@@ -10,13 +10,72 @@
     break-inside: avoid;
     margin-bottom: 2rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .masonry-grid {
         column-count: 2;
 }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .masonry-grid {
         column-count: 3;
+    }
+}
+
+/* Target the specific button class */
+.qxCTlb {
+    /* Reset existing styles */
+    all: unset !important;
+    
+    /* Apply new styles */
+    display: inline-block !important;
+    width: 100% !important;
+    padding: 1rem 0rem !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    color: white !important;
+    background-image: linear-gradient(to right, #6b21a8, #22c55e) !important;
+    border-radius: 0.25rem !important;
+    transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out !important;
+}
+
+/* Hover state */
+.qxCTlb:hover {
+    background-image: linear-gradient(to right, #7c3aed, #4ade80) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Focus state */
+.qxCTlb:focus {
+    outline: 2px solid #6b21a8 !important;
+    outline-offset: 2px !important;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .qxCTlb {
+        width: auto !important;
+        font-size: 1.125rem !important;
+        padding: 1rem 1.5rem !important;
+    }
+}
+
+/* Style for the container that appears after clicking the button */
+.hur54b {
+    padding: 5rem 0.75rem 2rem 0.75rem !important;
+}
+@media (min-width: 640px) {
+    .hur54b {
+        padding: 5rem 4rem 2rem 4rem !important; /* Reset to default padding on larger screens */
+    }
+}
+@media (min-width: 768px) {
+    .hur54b {
+        padding: 5rem 8rem 2rem 8rem !important; /* Reset to default padding on larger screens */
+    }
+}
+@media (min-width: 1440px) {
+    .hur54b {
+        padding: 5rem 18rem 2rem 18rem !important; /* Reset to default padding on larger screens */
     }
 }
