@@ -29,12 +29,12 @@
   <!--Right Col-->
   <div class="w-full xl:w-3/5 p-6 mt-12 md:p-12 xl:mt-0 overflow-hidden">
     <div class="macbook-container relative mx-auto w-full md:w-4/5 transform xl:-rotate-6 transition hover:scale-105 duration-500 hover:rotate-0 group">
-      <div class="macbook-screen absolute inset-0 overflow-hidden rounded-lg" style="top: 7.0%; left: 1.75%; right: 4.6%; bottom: 7.3%;">
+      <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.9%; bottom: 7.5%;">
         <video autoplay loop muted playsinline class="w-full h-full object-cover">
-          <source src="{{ asset('images/Animation.mp4') }}" type="video/mp4">
+          <source src="{{ asset('images/Animation2.mp4') }}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <div class="absolute inset-0 bg-gray-800 bg-opacity-0 xl:bg-opacity-60 transition-opacity duration-300 group-hover:opacity-0 z-10"></div>
+        <div class="absolute inset-0 bg-neutral-700 bg-opacity-0 xl:bg-opacity-60 transition-opacity duration-300 group-hover:opacity-0 z-10"></div>
       </div>
       <img class="w-full" src="{{ asset('images/macbook.svg') }}" alt="{{ __('Macbook Frame') }}" />
     </div>

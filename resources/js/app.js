@@ -25,23 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
             // After the button is loaded, apply Tailwind-like styles
             setTimeout(() => {
                 const button = document.querySelector('.qxCTlb');
-                if (button) {
-                    button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'focus:ring', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'w-full', 'md:w-auto');
-                    button.style.setProperty('padding', '1rem 1.5rem', 'important');
-
-                    // Add an event listener for the 'click' event
-                    button.addEventListener('click', function() {            
-                        setTimeout(() => {
-                            const cont = document.querySelector('.hur54b');
-                            if (cont) {
-                                if (window.innerWidth < 768) { // only change padding on mobile
-                                    cont.style.setProperty('padding', '5rem 0.75rem 2rem 0.75rem', 'important');
-                                }
+                var changedstyles = false;
+                while (!changedstyles) {
+                    if (button) {
+                        button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'focus:ring', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'w-full', 'md:w-auto');
+                        button.style.setProperty('padding', '1rem 1.5rem', 'important');
+                        changedstyles = true;
+                    }
+                }                        // Add an event listener for the 'click' event
+                button.addEventListener('click', function() {            
+                    setTimeout(() => {
+                        const cont = document.querySelector('.hur54b');
+                        if (cont) {
+                            if (window.innerWidth < 768) { // only change padding on mobile
+                                cont.style.setProperty('padding', '5rem 0.75rem 2rem 0.75rem', 'important');
                             }
-                        }, 0);
-                    });
-                }
-            }, 100); // Small delay to ensure button is rendered
+                        }
+                    }, 0);
+                });
+            }, 0); // Small delay to ensure button is rendered
         } else {
             // If the calendar script hasn't loaded yet, try again in a moment
             setTimeout(initializeCalendarButton, 100);
