@@ -4,7 +4,7 @@ return [
 
     // Validation
     'email_required' => 'Het lijkt erop dat je geen email hebt ingevuld',
-    'email_invalid' => 'Dit lijkt me geen geldig email',
+    'email_invalid' => 'Dit lijkt me geen geldig email adres',
 
 
     // Succes

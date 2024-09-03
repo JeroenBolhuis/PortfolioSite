@@ -41,7 +41,7 @@
         @endif
 
         @if ($errors->any())
-            <div class="z-10 absolute top-12 left-2/3 rotate-12 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded text-xs md:text-sm">
+            <div id="errorMessage"  class="z-10 absolute top-12 left-2/3 rotate-12 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded text-xs md:text-sm">
                 <strong class="font-bold">{{ __('Whoops!') }}</strong>
                 <span class="block sm:inline">{{ $errors->first() }}</span>
             </div>
@@ -61,3 +61,24 @@
     </a>
   </div>
 @endsection
+
+
+@push('scripts')
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to hide the message
+        function hideMessage() {
+            const message = document.getElementById('errorMessage');
+            if (message) {
+                message.style.transition = "opacity 1s ease";
+                message.style.opacity = "0";
+                setTimeout(function() {
+                    message.style.display = "none";
+                }, 1000); // Delay to allow the fade out transition
+            }
+        }
+        // hide the message after a few seconds on page load
+        setTimeout(hideMessage, 2000);
+    });
+  </script>
+@endpush
