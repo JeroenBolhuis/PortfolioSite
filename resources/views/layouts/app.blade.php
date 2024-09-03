@@ -14,7 +14,7 @@
     </script>
     @stack('styles')
 </head>
-<body class="flex flex-col text-indigo-400" style="background-image: url('{{ secure_asset('images/header.png') }}');background-attachment: fixed;">
+<body class="flex flex-col text-indigo-400" style="background-image: url('{{ asset('images/header.png') }}'); background-size: cover;">
     <nav class="bg-main fixed w-full z-20 top-0 start-0 border-b border-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">

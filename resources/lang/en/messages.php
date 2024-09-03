@@ -16,6 +16,6 @@ return [
     'email_required' => 'It seems as if the :attribute field is empty',
     'email_invalid' => 'That does not look like a email to me',
 
-    'info_received' => 'You will receive more information soon!',
+    'info_received' => 'Check your mailbox for more information!',
 
 ];

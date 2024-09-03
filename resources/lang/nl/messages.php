@@ -8,6 +8,6 @@ return [
 
 
     // Succes
-    'info_received' => 'Je ontvangt binnenkort meer informatie!',
+    'info_received' => 'Check je mailbox voor meer informatie!',
 
 ];
