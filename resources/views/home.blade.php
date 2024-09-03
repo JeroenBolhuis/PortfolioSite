@@ -66,7 +66,6 @@
 @push('scripts')
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Function to hide the message
         function hideMessage() {
             const message = document.getElementById('errorMessage');
             if (message) {
@@ -74,7 +73,7 @@
                 message.style.opacity = "0";
                 setTimeout(function() {
                     message.style.display = "none";
-                }, 1000); // Delay to allow the fade out transition
+                }, 1000); // same as transition time
             }
         }
         // hide the message after a few seconds on page load
