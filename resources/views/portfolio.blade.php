@@ -4,28 +4,27 @@
 
 @push('styles')
   <style>
-    .grid {
+    .masonry-grid {
       display: grid;
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+      grid-gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
       grid-auto-rows: 20px;
     }  
   </style>
 @endpush
 
 @section('content')
+  <h1 class="uppercase text-center my-24 text-4xl md:text-6xl text-white">{{ __('My work') }}</h1>
 
-  <h1 class="uppercase text-center my-24 text-6xl text-white">{{ __('My work') }}</h1>
-
-  <div class="grid px-4 md:px-80">
+  <div class="masonry-grid px-4 md:px-20 lg:px-40 max-w-screen-xl mx-auto">
     @foreach ($projects as $project)
-      <div class="item">
-        <div class="content bg-black rounded-3xl overflow-hidden flex duration-[600ms] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="50">
-          <div class="group relative flex flex-col">
-            <img src="{{ asset($project['src']) }}" class="w-full h-auto rounded-3xl shadow-lg">
+      <div class="masonry-item">
+        <div class="content bg-black rounded-3xl overflow-hidden flex mb-8" data-aos="fade-up">
+          <div class="group relative flex flex-col w-full">
+            <img src="{{ asset($project['src']) }}" class="w-full h-auto rounded-3xl shadow-lg object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 p-4 flex flex-col justify-end">
-              <p class="text-white text-4xl md:text-5xl transition-all duration-300 transform translate-y-[50%] group-hover:translate-y-[-15%]">{{ __($project['title']) }}</p>
-              <p class="text-white text-xl md:text-xl opacity-0 transition-all duration-300 transform group-hover:opacity-100">{{ __($project['subtitle']) }}</p>
+              <p class="text-white text-2xl md:text-3xl lg:text-4xl transition-all duration-300 transform translate-y-[50%] group-hover:translate-y-[-15%]">{{ __($project['title']) }}</p>
+              <p class="text-white text-lg md:text-xl opacity-0 transition-all duration-300 transform group-hover:opacity-100">{{ __($project['subtitle']) }}</p>
             </div>
           </div>
         </div>
@@ -35,35 +34,40 @@
 @endsection
 
 @push('scripts')
-  <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script>
     function resizeGridItem(item){
-      const grid = document.querySelector(".grid");
-      const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-      const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-      const rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-      item.style.gridRowEnd = "span " + rowSpan;
+      grid = document.getElementsByClassName("masonry-grid")[0];
+      rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+      rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+      rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+      item.style.gridRowEnd = "span "+rowSpan;
     }
-    
+
     function resizeAllGridItems(){
-      const allItems = document.querySelectorAll(".item");
-      allItems.forEach(item => resizeGridItem(item));
+      allItems = document.getElementsByClassName("masonry-item");
+      for(x=0;x<allItems.length;x++){
+        resizeGridItem(allItems[x]);
+      }
     }
-    
+
     function resizeInstance(instance){
-      const item = instance.elements[0];
+      item = instance.elements[0];
       resizeGridItem(item);
     }
-    
     window.addEventListener("load", () => {
       resizeAllGridItems();
-      TAOS.init();
+      AOS.init();
     });
-    
     window.addEventListener("resize", resizeAllGridItems);
 
-    document.querySelectorAll(".item").forEach(item => {
-      imagesLoaded(item, resizeInstance);
-    });
+    allItems = document.getElementsByClassName("masonry-item");
+    for(x=0;x<allItems.length;x++){
+      imagesLoaded( allItems[x], resizeInstance);
+    }
   </script>
 @endpush
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

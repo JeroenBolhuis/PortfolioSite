@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', __('EfficiënC'))</title>
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
-    <script>document.documentElement.classList.add('js')</script>
+    @vite('resources/js/app.js')  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             TAOS.init();
@@ -58,8 +58,10 @@
             <p>&copy; {{ date('Y') }} {{ __('EfficiënC') }}. {{ __('All rights reserved.') }}</p>
         </div>
     </footer>
-
-    <!-- <script src="{{ secure_asset('js/app.js') }}"></script> -->
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
