@@ -3,7 +3,9 @@
 @section('title', __('Portfolio'))
 
 @section('content')
-  <h1 class="uppercase text-center my-24 text-4xl md:text-6xl text-white">{{ __('My work') }}</h1>
+
+<div class="container mx-auto px-4 py-12">
+  <h1 class="text-4xl md:text-6xl text-white text-center mb-12">{{ __('My work') }}</h1>
 
   <div class="masonry-grid px-4 md:px-20 lg:px-40 max-w-screen-xl mx-auto">
     @foreach ($projects as $project)
@@ -20,4 +22,5 @@
       </div>
     @endforeach
   </div>
+</div>
 @endsection

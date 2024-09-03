@@ -26,7 +26,8 @@
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                     @foreach([
                         ['name' => __('Home'), 'url' => '/', 'active' => request()->is('/')],
-                        ['name' => __('Portfolio'), 'url' => '/portfolio', 'active' => request()->is('portfolio')]
+                        ['name' => __('Portfolio'), 'url' => '/portfolio', 'active' => request()->is('portfolio')],
+                        ['name' => __('About'), 'url' => '/about', 'active' => request()->is('about')]
                     ] as $item)
                         <li>
                             <a href="{{ $item['url'] }}" class="block py-2 px-3 rounded md:p-0 {{ $item['active'] ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700' : 'md:hover:bg-transparent md:hover:text-blue-700 hover:bg-gray-700 text-gray-900 md:text-gray-50' }}">

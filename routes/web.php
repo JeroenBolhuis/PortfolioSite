@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::post('/submit', [HomeController::class, 'submit'])->name('submit');
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/preview-email', function () {
     return view('emails.contact');
