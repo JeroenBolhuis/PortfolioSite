@@ -47,6 +47,7 @@
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
     <script>
       window.addEventListener('load', function() {
+        console.log('load');
         var target = document.getElementById('calendar-container');
         var label = @json(__('Make an appointment'));
         calendar.schedulingButton.load({
@@ -57,11 +58,22 @@
         });
 
         // After the button is loaded, apply Tailwind-like styles
-        var button = document.querySelector('.qxCTlb');
+        const button = document.querySelector('.qxCTlb');
         if (button) {
           button.classList.add('bg-gradient-to-r', 'from-purple-800', 'to-green-500', 'hover:from-purple-700', 'hover:to-green-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'rounded', 'focus:ring', 'transform', 'transition', 'hover:scale-105', 'duration-300', 'ease-in-out', 'md:text-lg', 'w-full', 'md:w-auto');
           button.style.setProperty('padding', '1rem 1.5rem', 'important');
         }
+        // Add an event listener for the 'click' event
+        button.addEventListener('click', function() {            
+          setTimeout(() => {
+            const cont = document.querySelector('.hur54b');
+            if (cont) {
+              if (window.innerWidth < 768) { // only change padding on mobile
+                cont.style.setProperty('padding', '5rem 1rem 2rem 1rem', 'important');
+              } 
+            }
+          }, 0);
+        });
       });
     </script>
 @endpush
