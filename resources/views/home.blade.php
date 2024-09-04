@@ -35,7 +35,7 @@
     </div>
   </div>
   <!--Right Col-->
-  <div class="w-full xl:w-3/5 p-6 mt-12 md:p-12 xl:mt-0 overflow-hidden">
+  <div class="w-full xl:w-3/5 py-6 mt-12 md:p-12 xl:mt-0 overflow-hidden">
     <div class="macbook-container relative mx-auto w-full md:w-4/5 transform xl:-rotate-6 transition hover:scale-105 duration-500 hover:rotate-0 group">
       <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.9%; bottom: 7.5%;">
         <video autoplay loop muted playsinline class="w-full h-full object-cover">
