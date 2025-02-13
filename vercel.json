@@ -10,7 +10,7 @@
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://website-jeroenbolhuis-projects.vercel.app",
         "APP_KEY": "base64:kiSNO9o4Ke5I0DbWoGNLWlZJJXZTf26PRKl/mlVyv9Y=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -21,6 +21,8 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node"
     }
 }
