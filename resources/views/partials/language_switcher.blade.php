@@ -1,26 +1,31 @@
-<form id="localeform" action="{{ route('setLocale') }}" method="get" class="relative inline-block text-left">
+<form id="localeform" action="{{ route('setLocale') }}" method="get" class="relative inline-flex items-center h-full py-2 px-3">    
     @php
         $currentLocale = Session::get('locale', 'en');
         $locales = [
             'en' => ['flag' => 'images/united-kingdom.png', 'label' => 'English'],
-            'nl' => ['flag' => 'images/netherlands.png', 'label' => 'Nederlands']
+            'nl' => ['flag' => 'images/netherlands.png', 'label' => 'Nederlands'],
         ];
     @endphp
 
-    <button type="button" class="inline-flex items-center border border-gray-300 bg-black px-2 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" id="dropdownButton">
-        <img src="{{ $locales[$currentLocale]['flag'] }}" alt="Selected Flag" class="w-6 h-6 shadow-inner">
+    <button type="button" 
+        class="inline-flex items-center border border-gray-300 bg-black px-2 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-700 hover:bg-gray-200 w-8 h-6 bg-center bg-no-repeat bg-cover" 
+        id="dropdownButton"
+        style="background-image: url('{{ $locales[$currentLocale]['flag'] }}')"
+    >
     </button>
 
-    <div id="dropdownMenu" class="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
-        <div class="py-0">
-            @foreach ($locales as $locale => $data)
-                @if ($locale !== $currentLocale)
-                    <button type="submit" name="locale" value="{{ $locale }}" class="flex items-center w-full px-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 focus:outline-none">
-                        <img src="{{ $data['flag'] }}" alt="{{ $data['label'] }} Flag" class="w-6 h-6 shadow-inner">
-                    </button>
-                @endif
-            @endforeach
-        </div>
+    <div id="dropdownMenu" class="absolute top-full mt-1 origin-top hidden flex flex-col items-center gap-2">
+        @foreach ($locales as $locale => $data)
+            @if ($locale !== $currentLocale)
+                <button type="submit" 
+                    name="locale" 
+                    value="{{ $locale }}" 
+                    class="w-8 h-6 bg-center bg-no-repeat bg-cover rounded-md bg-gray-700 hover:border hover:border-gray-300"
+                    style="background-image: url('{{ $data['flag'] }}')"
+                >
+                </button>
+            @endif
+        @endforeach
     </div>
 </form>
 
