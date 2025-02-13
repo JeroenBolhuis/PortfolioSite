@@ -11,7 +11,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://website-jeroenbolhuis-projects.vercel.app",
+        "APP_URL": "https://jeroenbolhuis.vercel.app",
         "APP_KEY": "base64:kiSNO9o4Ke5I0DbWoGNLWlZJJXZTf26PRKl/mlVyv9Y=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
