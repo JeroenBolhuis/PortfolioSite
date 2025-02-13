@@ -33,10 +33,15 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-4">{{ __('Tech Stack') }}</h3>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Laravel</span>
-                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Tailwind CSS</span>
-                    <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Vercel</span>
-                    <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-sm">Supabase</span>
+                    <span class="px-3 py-1 bg-purple-700/20 text-purple-300 rounded-full text-sm">Laravel</span>
+                    <span class="px-3 py-1 bg-blue-700/20 text-blue-300 rounded-full text-sm">Blade</span>
+                    <span class="px-3 py-1 bg-indigo-700/20 text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
+                    <span class="px-3 py-1 bg-pink-700/20 text-pink-300 rounded-full text-sm">Livewire</span>
+                    <span class="px-3 py-1 bg-red-700/20 text-red-300 rounded-full text-sm">Alpine.js</span>
+                    <span class="px-3 py-1 bg-yellow-700/20 text-yellow-300 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-green-700/20 text-green-300 rounded-full text-sm">MySQL</span>
+                    <span class="px-3 py-1 bg-cyan-700/20 text-cyan-300 rounded-full text-sm">Vercel</span>
+                    <span class="px-3 py-1 bg-orange-700/20 text-orange-300 rounded-full text-sm">Supabase</span>
                 </div>
             </div>
         </div>
