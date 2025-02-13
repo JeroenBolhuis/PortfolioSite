@@ -33,7 +33,7 @@
                     <a href="https://www.google.com/maps/search/?api=1&query=Eindhoven%2C+NL" target="_blank" class="text-gray-300 text-sm ml-1">Eindhoven, NL</a>
                 </div>
                 <div class="flex gap-4 my-4">
-                    <a href="#contact" class="glass hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                    <a href="#contact" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
                         {{ __('Contact Me') }}
                     </a>
                 </div>
