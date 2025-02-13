@@ -8,12 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::post('/submit', [HomeController::class, 'submit'])->name('submit');
-Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
-
-Route::get('/preview-email', function () {
-    return view('emails.contact');
-});
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::match(['get', 'post'], '/setLocale', function (Request $request) {
     $locale = $request->input('locale');

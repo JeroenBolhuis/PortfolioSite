@@ -2,21 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.masonry-grid {
-    column-gap: 2rem;
-    column-count: 1;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }
-.masonry-item {
-    break-inside: avoid;
-    margin-bottom: 2rem;
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 640px) {
-    .masonry-grid {
-        column-count: 2;
+
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 4px;
 }
-}
-@media (min-width: 1024px) {
-    .masonry-grid {
-        column-count: 3;
-    }
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.7);
 }
