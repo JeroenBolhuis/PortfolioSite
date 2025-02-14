@@ -11,7 +11,6 @@
     <nav class="bg-black/50 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-white/5">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="{{ __('Flowbite Logo') }}">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Jeroen Bolhuis</span>
             </a>
             <!-- Toggle Button for Mobile Menu -->
@@ -47,7 +46,7 @@
     <footer class="bg-black/50 backdrop-blur-sm text-white py-8 mt-auto relative z-10 border-t border-white/5">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="mb-4 md:mb-0">&copy; {{ date('Y') }} {{ __('EfficiënC') }}. {{ __('All rights reserved.') }}</p>
+                <p class="mb-4 md:mb-0">&copy; {{ date('Y') }} {{ __('Jeroen Bolhuis') }}. {{ __('All rights reserved.') }}</p>
                 <div class="flex space-x-6">
                     <a href="https://github.com/JeroenBolhuis" target="_blank" class="hover:text-purple-400 transition-colors duration-300">
                         <span class="sr-only">GitHub</span>
