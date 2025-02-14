@@ -1,4 +1,4 @@
-<form id="localeform" action="{{ route('setLocale') }}" method="get" class="relative inline-flex items-center h-full py-2 px-3">    
+<form id="localeform" action="{{ route('setLocale') }}" method="get" class="inline-flex items-center gap-4 h-full px-3 md:px-0">    
     @php
         $currentLocale = Session::get('locale', 'en');
         $locales = [
@@ -7,24 +7,19 @@
         ];
     @endphp
 
-    <button type="button" 
-        class="inline-flex items-center border border-gray-300 bg-black px-2 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-700 hover:bg-gray-200 w-8 h-6 bg-center bg-no-repeat bg-cover" 
-        id="dropdownButton"
-        style="background-image: url('{{ $locales[$currentLocale]['flag'] }}')"
-    >
-    </button>
-
-    <div id="dropdownMenu" class="absolute top-full mt-1 origin-top hidden flex flex-col items-center gap-2">
+    <div class="flex items-center gap-4">
         @foreach ($locales as $locale => $data)
-            @if ($locale !== $currentLocale)
-                <button type="submit" 
-                    name="locale" 
-                    value="{{ $locale }}" 
-                    class="w-8 h-6 bg-center bg-no-repeat bg-cover rounded-md bg-gray-700 hover:border hover:border-gray-300"
-                    style="background-image: url('{{ $data['flag'] }}')"
-                >
-                </button>
-            @endif
+            <button type="submit" 
+                name="locale" 
+                value="{{ $locale }}" 
+                class="w-8 h-6 bg-center bg-no-repeat bg-cover rounded-md transition-all duration-200 hover:scale-105
+                    {{ $locale === $currentLocale 
+                        ? 'shadow-lg' 
+                        : 'opacity-25 hover:opacity-100' }}"
+                style="background-image: url('{{ $data['flag'] }}')"
+                title="{{ $data['label'] }}"
+            >
+            </button>
         @endforeach
     </div>
 </form>
