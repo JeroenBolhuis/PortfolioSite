@@ -13,7 +13,7 @@
                     if (window.AOS) {
                         window.AOS.refresh();
                     }
-                }, 25);
+                }, 5);
             }
         }">
             <!-- Modern Toggle Switch -->
