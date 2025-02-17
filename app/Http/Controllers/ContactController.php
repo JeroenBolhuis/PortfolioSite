@@ -16,8 +16,26 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('jeroen.bolhuis@hotmail.com')->send(new \App\Mail\ContactFormSubmission($validated));
+        try {
+            Mail::to('jeroen.bolhuis@hotmail.com')->send(new \App\Mail\ContactFormSubmission($validated));
 
-        return redirect()->route('home', ['#contact'])->with('success', __('Your message has been sent successfully!'));
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => __('Your message has been sent successfully!')
+                ]);
+            }
+
+            return redirect()->route('home', ['#contact'])->with('success', __('Your message has been sent successfully!'));
+        } catch (\Exception $e) {
+            \Log::error('Contact form submission failed: ' . $e->getMessage());
+            
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => __('Failed to send message. Please try again later.')
+                ], 500);
+            }
+
+            return redirect()->route('home', ['#contact'])->with('error', __('Failed to send message. Please try again later.'));
+        }
     }
 }
