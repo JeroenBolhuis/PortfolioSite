@@ -8,20 +8,24 @@
                 <div class="break-inside-avoid mb-8">
                     <div class="bg-white/[0.03] backdrop-blur-[10px] border border-white/[0.05] rounded-3xl overflow-hidden" data-aos="fade-up">
                         <!-- Image Section -->
+                         
+                        @if(isset($project['src']))
                         <img 
                             src="{{ asset($project['src']) }}" 
                             class="w-full h-auto object-cover" 
                             alt="{{ $project['title'] }}"
                         >
-                        
+                        @endif
                         <!-- Content Section -->
                         <div class="p-6 md:p-8">
                             <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
                                 {{ __($project['title']) }}
                             </h3>
+                            @if(isset($project['description']))
                             <p class="text-gray-300 text-lg leading-relaxed">
                                 {{ __($project['description']) }}
                             </p>
+                            @endif
                             
                             <!-- Technologies -->
                             @if(isset($project['technologies']))
