@@ -61,13 +61,13 @@
     }">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('Get in Touch') }}</h2>
-        <div class="max-w-2xl mx-auto">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
             <div x-show="showSuccess" x-cloak x-transition
-                class="bg-green-500/20 backdrop-blur-sm text-green-300 p-4 rounded-lg mb-6" data-aos="fade-up">
+                class="bg-green-500/20 backdrop-blur-sm text-green-300 p-4 rounded-lg mb-6">
                 {{ __('Your message has been sent successfully!') }}
             </div>
 
-            <form @submit.prevent="submitForm()" class="space-y-6 glass p-8 rounded-2xl" data-aos="fade-up">
+            <form @submit.prevent="submitForm()" class="space-y-6 glass p-8 rounded-2xl">
                 @csrf
                 <div>
                     <label for="name" class="block text-white mb-2">{{ __('Name') }}</label>

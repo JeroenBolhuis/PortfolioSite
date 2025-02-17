@@ -1,48 +1,98 @@
-<!-- About Cards Section -->
+<!-- About Section -->
 <div id="about" class="section-divider py-20 bg-black/30 backdrop-blur-sm relative">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Education Card -->
-            <div class="glass p-8 rounded-2xl hover:transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-purple-400 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    </svg>
+        
+        <!-- Education & Experience Toggle Section -->
+        <div class="max-w-3xl mx-auto mb-16" x-data="{ activeTab: 'education' }">
+            <!-- Modern Toggle Switch -->
+            <div class="flex justify-center mb-8" data-aos="fade-up">
+                <div class="glass inline-flex items-center rounded-full p-1 relative">
+                    <!-- Background Slider -->
+                    <div class="absolute h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full transition-all ease-out bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-6 duration-300"
+                         :class="{ 
+                            'left-1': activeTab === 'education',
+                            'left-[calc(50%+4px)]': activeTab === 'experience'
+                         }">
+                    </div>
+                    
+                    <!-- Buttons -->
+                    <button 
+                        @click="activeTab = 'education'" 
+                        class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
+                        :class="{ 'text-white': activeTab === 'education', 'text-gray-400 hover:text-white': activeTab !== 'education' }">
+                        {{ __('Education') }}
+                    </button>
+                    <button 
+                        @click="activeTab = 'experience'" 
+                        class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
+                        :class="{ 'text-white': activeTab === 'experience', 'text-gray-400 hover:text-white': activeTab !== 'experience' }">
+                        {{ __('Experience') }}
+                    </button>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">{{ __('Education') }}</h3>
-                <p class="text-gray-300">{{ __('Currently studying Informatica (HBO) at Avans Hogeschool in Den Bosch, expanding my knowledge in software development and computer science.') }}</p>
             </div>
-            <!-- Experience Card -->
-            <div class="glass p-8 rounded-2xl hover:transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-purple-400 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
+
+            <!-- Content -->
+            <div class="glass p-6 rounded-2xl">
+                <div class="relative">
+                    <!-- Education Panel -->
+                    <div class="transition-all duration-300 ease-out w-full"
+                         :class="{ 
+                            'opacity-100 visible': activeTab === 'education',
+                            'opacity-0 invisible absolute inset-0': activeTab !== 'education'
+                         }">
+                        <div class="space-y-8">
+                            @foreach($education as $item)
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                    <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
+                                        <span class="text-purple-400 text-sm ml-2">{{ $item['date'] }}</span>
+                                    </div>
+                                    <p class="text-gray-300 my-2">{{ $item['description'] }}</p>
+                                    
+                                    <a href="https://www.google.com/maps/search/?api=1&query={{$item['location']}}" target="_blank" class="flex items-center gap-1 text-gray-300 hover:text-purple-400">
+                                        <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                        <p class="text-xs">{{ $item['location'] }}</p>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <!-- Experience Panel -->
+                    <div class="transition-all duration-300 ease-out w-full"
+                         :class="{ 
+                            'opacity-100 visible': activeTab === 'experience',
+                            'opacity-0 invisible absolute inset-0': activeTab !== 'experience'
+                         }">
+                        <div class="space-y-8">
+                            @foreach($experience as $item)
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                    <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
+                                    <div class="mb-1">
+                                        <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
+                                        <span class="text-purple-400 text-sm ml-2">{{ $item['date'] }}</span>
+                                    </div>
+                                    <p class="text-gray-300">{{ $item['description'] }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">{{ __('Experience') }}</h3>
-                <p class="text-gray-300">{{ __('Specialized in developing custom web solutions for businesses, focusing on automation and efficiency through modern web technologies.') }}</p>
             </div>
-            <!-- Tech Stack Card -->
-            <div class="glass p-8 rounded-2xl hover:transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-purple-400 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-4">{{ __('Tech Stack') }}</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-purple-700/20 text-purple-300 rounded-full text-sm">Laravel</span>
-                    <span class="px-3 py-1 bg-blue-700/20 text-blue-300 rounded-full text-sm">Blade</span>
-                    <span class="px-3 py-1 bg-indigo-700/20 text-indigo-300 rounded-full text-sm">Tailwind CSS</span>
-                    <span class="px-3 py-1 bg-pink-700/20 text-pink-300 rounded-full text-sm">Livewire</span>
-                    <span class="px-3 py-1 bg-red-700/20 text-red-300 rounded-full text-sm">Alpine.js</span>
-                    <span class="px-3 py-1 bg-green-700/20 text-green-300 rounded-full text-sm">MySQL</span>
-                    <span class="px-3 py-1 bg-cyan-700/20 text-cyan-300 rounded-full text-sm">Vercel</span>
-                    <span class="px-3 py-1 bg-orange-700/20 text-orange-300 rounded-full text-sm">Supabase</span>
-                    <span class="px-3 py-1 bg-yellow-700/20 text-yellow-300 rounded-full text-sm">Vite</span>
-                </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-white mb-6">{{ __('Tech Stack') }}</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                @foreach($techStack as $tech)
+                    <span class="px-4 py-2 rounded-full text-sm {{ $tech['class'] }}">{{ $tech['name'] }}</span>
+                @endforeach
             </div>
         </div>
     </div>
