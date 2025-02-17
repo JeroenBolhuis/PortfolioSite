@@ -4,7 +4,18 @@
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         
         <!-- Education & Experience Toggle Section -->
-        <div class="max-w-3xl mx-auto mb-16" x-data="{ activeTab: 'education' }">
+        <div class="max-w-3xl mx-auto mb-16" x-data="{ 
+            activeTab: 'education',
+            switchTab(tab) {
+                this.activeTab = tab;
+                // Small delay to ensure content is rendered before refreshing AOS
+                setTimeout(() => {
+                    if (window.AOS) {
+                        window.AOS.refresh();
+                    }
+                }, 25);
+            }
+        }">
             <!-- Modern Toggle Switch -->
             <div class="flex justify-center mb-8" data-aos="fade-up">
                 <div class="glass inline-flex items-center rounded-full p-1 relative">
@@ -18,13 +29,13 @@
                     
                     <!-- Buttons -->
                     <button 
-                        @click="activeTab = 'education'" 
+                        @click="switchTab('education')" 
                         class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'education', 'text-gray-400 hover:text-white': activeTab !== 'education' }">
                         {{ __('Education') }}
                     </button>
                     <button 
-                        @click="activeTab = 'experience'" 
+                        @click="switchTab('experience')" 
                         class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'experience', 'text-gray-400 hover:text-white': activeTab !== 'experience' }">
                         {{ __('Experience') }}
