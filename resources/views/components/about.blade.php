@@ -102,7 +102,10 @@
             <h3 class="text-2xl font-bold text-white mb-6">{{ __('Tech Stack') }}</h3>
             <div class="flex flex-wrap justify-center gap-3">
                 @foreach($techStack as $tech)
-                    <span class="px-4 py-2 rounded-full text-sm {{ $tech['class'] }}">{{ $tech['name'] }}</span>
+                    <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
+                       class="px-4 py-2 rounded-full text-sm {{ $tech['class'] }} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20">
+                        {{ $tech['name'] }}
+                    </a>
                 @endforeach
             </div>
         </div>

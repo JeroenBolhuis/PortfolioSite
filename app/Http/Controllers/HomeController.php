@@ -39,15 +39,15 @@ class HomeController extends Controller
         ];
 
         $techStack = [
-            ['name' => 'Laravel', 'class' => 'bg-purple-700/20 text-purple-300'],
-            ['name' => 'Blade', 'class' => 'bg-blue-700/20 text-blue-300'],
-            ['name' => 'Tailwind CSS', 'class' => 'bg-indigo-700/20 text-indigo-300'],
-            ['name' => 'Livewire', 'class' => 'bg-pink-700/20 text-pink-300'],
-            ['name' => 'Alpine.js', 'class' => 'bg-red-700/20 text-red-300'],
-            ['name' => 'MySQL', 'class' => 'bg-green-700/20 text-green-300'],
-            ['name' => 'Vercel', 'class' => 'bg-cyan-700/20 text-cyan-300'],
-            ['name' => 'Supabase', 'class' => 'bg-orange-700/20 text-orange-300'],
-            ['name' => 'Vite', 'class' => 'bg-yellow-700/20 text-yellow-300']
+            ['name' => 'Laravel', 'class' => 'bg-purple-700/20 text-purple-300', 'url' => 'https://laravel.com'],
+            ['name' => 'Blade', 'class' => 'bg-blue-700/20 text-blue-300', 'url' => 'https://laravel.com/docs/blade'],
+            ['name' => 'Tailwind CSS', 'class' => 'bg-indigo-700/20 text-indigo-300', 'url' => 'https://tailwindcss.com'],
+            ['name' => 'Livewire', 'class' => 'bg-pink-700/20 text-pink-300', 'url' => 'https://livewire.laravel.com'],
+            ['name' => 'Alpine.js', 'class' => 'bg-red-700/20 text-red-300', 'url' => 'https://alpinejs.dev'],
+            ['name' => 'MySQL', 'class' => 'bg-green-700/20 text-green-300', 'url' => 'https://www.mysql.com'],
+            ['name' => 'Vercel', 'class' => 'bg-cyan-700/20 text-cyan-300', 'url' => 'https://vercel.com'],
+            ['name' => 'Supabase', 'class' => 'bg-orange-700/20 text-orange-300', 'url' => 'https://supabase.com'],
+            ['name' => 'Vite', 'class' => 'bg-yellow-700/20 text-yellow-300', 'url' => 'https://vitejs.dev']
         ];
 
         $projects = [
