@@ -1,42 +1,51 @@
 <div class="w-full text-center overflow-hidden">
-    <h3 class="text-2xl font-bold text-white z-30" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
-    <p class="text-gray-500 leading-tight z-30" data-aos="fade-in">{{ __('See what I use to build my projects') }}</p>
+    <h3 class="text-2xl font-bold text-white z-20" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
+    <p class="text-gray-500 leading-tight z-20" data-aos="fade-in">{{ __('See what I use to build my projects') }}</p>
     
     <div class="relative flex flex-col gap-4 px-4" 
         x-data="{
-            squareSize: window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100, // Responsive square size
-            gap: 16, // Gap between squares
-            minMargin: 16, // Minimum margin on sides
+            squareSize: window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
+            gap: 16,
+            minMargin: 16,
             cols: 4,
             techStack: {{ Js::from($techStack) }},
 
             init() {
                 this.updateGridColumns();
-                window.addEventListener('resize', () => {
+                const debouncedResize = this.debounce(() => {
                     this.squareSize = window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
                     this.updateGridColumns();
-                });
+                }, 150);
+                window.addEventListener('resize', debouncedResize);
+            },
+
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
             },
 
             updateGridColumns() {
                 const availableWidth = window.innerWidth - (this.minMargin * 2);
-                const itemWidth = this.squareSize + this.gap; // Total width including gap
+                const itemWidth = this.squareSize + this.gap;
                 this.cols = Math.floor(availableWidth / itemWidth);
-                // Ensure minimum of 2 columns and maximum of 20
                 this.cols = Math.max(2, Math.min(20, this.cols));
             },
 
-            // Calculate overlay size based on square size
             overlaySize(type) {
                 const baseSize = this.squareSize + this.gap;
-                // Double width for side fades on large screens
                 return window.innerWidth >= 1280 && type === 'side' 
                     ? `${baseSize * 2}px` 
                     : `${baseSize}px`;
             },
 
             maxItemsPerRow() {
-                // Reserve spaces (one or two per side depending on screen size) and return remaining space
                 const reservedSpaces = window.innerWidth >= 1280 ? 4 : 2;
                 return Math.max(1, this.cols - reservedSpaces);
             },
@@ -51,11 +60,8 @@
             },
 
             emptySpaces(rowItems) {
-                // Use 2 spaces on each side for large screens, 1 otherwise
                 const mandatorySpaces = window.innerWidth >= 1280 ? 2 : 1;
-                // Calculate remaining space after ensuring mandatory empty squares at start and end
                 const remainingSpace = this.cols - rowItems.length - (mandatorySpaces * 2);
-                // Distribute remaining space evenly between start and end
                 const extraSpaces = Math.floor(remainingSpace / 2);
                 return mandatorySpaces + extraSpaces;
             },
@@ -81,7 +87,7 @@
         <!-- Empty top row -->
         <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
 
@@ -91,27 +97,36 @@
                     :style="gridStyles()" :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
                 <!-- Left padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'left-'+i">
-                    <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                    <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
 
                 <!-- Tech stack items -->
                 <template x-for="(tech, techIndex) in row" :key="rowIndex+'-'+techIndex">
                     <a :href="tech.url" target="_blank" rel="noopener noreferrer" 
-                        class="group relative aspect-square flex items-center justify-center border border-purple-400/15 bg-neutral-950 rounded-lg"
+                        class="group relative aspect-square flex items-center justify-center border border-purple-400/10 bg-neutral-950 rounded-lg transform-gpu"
                         :style="{ '--tech-color': tech.color }">
                         <!-- Glow effect layer -->
-                        <div class="absolute -z-10 inset-0 rounded-lg">
-                            <div class="absolute inset-0 rounded-lg bg-[var(--tech-color)] blur-xl opacity-0 scale-75 
-                                group-hover:opacity-100 transition-all ease-in-out group-hover:duration-100 duration-[2s]"></div>
+                        <div class="-z-10 absolute inset-[-25%] pointer-events-none rounded-[100%] opacity-0 group-hover:opacity-75 transition-opacity group-hover:duration-100 duration-[2s]"
+                            :style="{ background: `radial-gradient(circle at center,
+                                ${tech.color} 0%,
+                                color-mix(in srgb, ${tech.color}, transparent 15%) 20%,
+                                color-mix(in srgb, ${tech.color}, transparent 40%) 35%,
+                                color-mix(in srgb, ${tech.color}, transparent 75%) 50%,
+                                transparent 70%)`}">
                         </div>
                         
-                        <img :src="tech.image" :alt="tech.name" class="w-[60%] h-[60%] object-contain" style="filter: drop-shadow(0 0 8px var(--tech-color));" />
+                        <div class="flex items-center justify-center w-full h-full bg-neutral-950 rounded-lg">
+                            <img :src="tech.image" :alt="tech.name" 
+                                loading="lazy"
+                                class="w-[60%] h-[60%] object-contain transform-gpu" 
+                                style="filter: drop-shadow(0 0 8px var(--tech-color));" />
+                        </div>
                     </a>
                 </template>
 
                 <!-- Right padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'right-'+i">
-                    <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                    <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
             </div>
         </template>
@@ -120,7 +135,7 @@
         <div class="grid w-full" :class="techStackRows().length % 2 === 0 ? 'pl-12' : 'pr-12'"
                 :style="gridStyles()" :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
     </div>
