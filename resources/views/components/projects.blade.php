@@ -6,7 +6,7 @@
         <div class="masonry-grid columns-1 lg:columns-2 gap-8 px-4 md:px-20 lg:px-40 max-w-screen-xl mx-auto">
             @foreach ($projects as $project)
                 <div class="break-inside-avoid mb-8">
-                    <div class="glass border-2 border-purple-400/15 rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:border-purple-400/30" data-aos="fade-up">
+                    <div class="glass border shadow-lg shadow-purple-400/15 border-purple-400/15 rounded-2xl overflow-hidden" data-aos="fade-up">
                         <!-- Image Section -->
                         @if(isset($project['src']))
                         <div class="relative overflow-hidden cursor-pointer" 

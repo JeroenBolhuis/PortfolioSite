@@ -10,7 +10,7 @@
     @stack('styles')
 </head>
 <body class="flex flex-col text-indigo-400 bg-gray-950 min-h-screen relative overflow-x-hidden">    
-    <nav class="bg-black/50 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-white/5">
+    <nav class="bg-black/50 fixed w-full z-20 top-0 start-0 border-b border-white/5">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center justify-between py-3">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -45,7 +45,7 @@
         @yield('content')
     </main>
 
-    <footer class="bg-black/50 backdrop-blur-sm text-white py-8 mt-auto relative z-10 border-t border-white/5">
+    <footer class="bg-black/50 text-white py-8 mt-auto relative z-10 border-t border-white/5">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="mb-4 md:mb-0">&copy; {{ date('Y') }} {{ __('Jeroen Bolhuis') }}. {{ __('All rights reserved.') }}</p>

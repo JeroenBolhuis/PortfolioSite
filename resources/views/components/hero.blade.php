@@ -47,7 +47,7 @@
             </div>
             <!-- Right Column -->
             <div class="lg:w-1/2 overflow-hidden">
-                <div class="macbook-container relative mx-auto transform hover:scale-105 duration-500 group max-w-full">
+                <div class="macbook-container relative mx-auto max-w-full group">
                     <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.9%; bottom: 7.5%;">
                         <video autoplay loop muted playsinline class="w-full h-full object-cover">
                             <source src="{{ asset('images/Animation.mp4') }}" type="video/mp4">

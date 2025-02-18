@@ -12,23 +12,10 @@
 
             init() {
                 this.updateGridColumns();
-                const debouncedResize = this.debounce(() => {
+                window.addEventListener('resize', () => {
                     this.squareSize = window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
                     this.updateGridColumns();
-                }, 150);
-                window.addEventListener('resize', debouncedResize);
-            },
-
-            debounce(func, wait) {
-                let timeout;
-                return function executedFunction(...args) {
-                    const later = () => {
-                        clearTimeout(timeout);
-                        func(...args);
-                    };
-                    clearTimeout(timeout);
-                    timeout = setTimeout(later, wait);
-                };
+                });
             },
 
             updateGridColumns() {
