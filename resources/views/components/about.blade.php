@@ -58,7 +58,7 @@
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div>
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
-                                        <span class="text-purple-400 text-sm pl-2">{{ $item['date'] }}</span>
+                                        <span class="text-purple-400 text-sm">{{ $item['date'] }}</span>
                                     </div>
                                     <p class="text-gray-300 my-2">{{ $item['description'] }}</p>
                                     
@@ -86,7 +86,7 @@
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div class="mb-1">
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
-                                        <span class="text-purple-400 text-sm ml-2">{{ $item['date'] }}</span>
+                                        <span class="text-purple-400 text-sm">{{ $item['date'] }}</span>
                                     </div>
                                     <p class="text-gray-300">{{ $item['description'] }}</p>
                                 </div>
