@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<div id="contact" class="border-t border-purple-400/15 py-12 bg-black/40 backdrop-blur-sm relative" 
+<div id="contact" class="border-t border-purple-400/15 py-16 bg-black/40 backdrop-blur-sm relative" 
     x-data="{
         formData: {
             name: '',
