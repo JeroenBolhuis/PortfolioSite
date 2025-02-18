@@ -1,5 +1,6 @@
 <div class="w-full text-center overflow-hidden">
-    <h3 class="text-2xl font-bold text-white relative z-30" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
+    <h3 class="text-2xl font-bold text-white z-30" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
+    <p class="text-gray-500 leading-tight z-30" data-aos="fade-in">{{ __('See what I use to build my projects') }}</p>
     
     <div class="relative flex flex-col gap-4 px-4" 
         x-data="{
@@ -80,7 +81,7 @@
         <!-- Empty top row -->
         <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
 
@@ -90,7 +91,7 @@
                     :style="gridStyles()" :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
                 <!-- Left padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'left-'+i">
-                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
 
                 <!-- Tech stack items -->
@@ -101,7 +102,7 @@
                         <!-- Glow effect layer -->
                         <div class="absolute -z-10 inset-0 rounded-lg">
                             <div class="absolute inset-0 rounded-lg bg-[var(--tech-color)] blur-xl opacity-0 scale-75 
-                                group-hover:opacity-100 transition-all ease-in-out group-hover:duration-0 duration-[2s]"></div>
+                                group-hover:opacity-100 transition-all ease-in-out group-hover:duration-100 duration-[2s]"></div>
                         </div>
                         
                         <img :src="tech.image" :alt="tech.name" class="w-[60%] h-[60%] object-contain" style="filter: drop-shadow(0 0 8px var(--tech-color));" />
@@ -110,7 +111,7 @@
 
                 <!-- Right padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'right-'+i">
-                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
             </div>
         </template>
@@ -119,7 +120,7 @@
         <div class="grid w-full" :class="techStackRows().length % 2 === 0 ? 'pl-12' : 'pr-12'"
                 :style="gridStyles()" :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
     </div>

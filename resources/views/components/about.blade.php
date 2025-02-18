@@ -1,5 +1,5 @@
 <!-- About Section -->
-<div id="about" class="section-divider py-12 bg-black/40 backdrop-blur-sm relative">
+<div id="about" class="border-y border-neutral-900 pt-12 pb-8 bg-black/40 backdrop-blur-sm relative">
     <div class="container mx-auto">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         
@@ -18,27 +18,34 @@
         }">
             <!-- Modern Toggle Switch -->
             <div class="flex justify-center mb-8" data-aos="fade-up">
-                <div class="glass inline-flex items-center rounded-full p-1 relative">
+                <div class="glass inline-flex items-center rounded-full relative">
                     <!-- Background Slider -->
-                    <div class="absolute h-[calc(100%-8px)] w-[calc(50%-4px)] rounded-full transition-all ease-out bg-gradient-to-r from-purple-500 to-pink-500 py-3 px-6 duration-300"
+                    <div class="absolute h-[calc(100%)] w-[calc(33.333%)] py-3 px-6 rounded-full transition-all ease-out bg-gradient-to-r from-purple-500 to-pink-500 duration-300"
                          :class="{ 
                             'left-1': activeTab === 'education',
-                            'left-[calc(50%+4px)]': activeTab === 'experience'
+                            'left-[calc(33.333%+4px)]': activeTab === 'experience',
+                            'left-[calc(66.666%+4px)]': activeTab === 'hobbies'
                          }">
                     </div>
                     
                     <!-- Buttons -->
                     <button 
                         @click="switchTab('education')" 
-                        class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'education', 'text-gray-400 hover:text-white': activeTab !== 'education' }">
                         {{ __('Education') }}
                     </button>
                     <button 
                         @click="switchTab('experience')" 
-                        class="relative px-6 py-2 rounded-full text-white font-medium transition-all duration-300 z-10"
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'experience', 'text-gray-400 hover:text-white': activeTab !== 'experience' }">
                         {{ __('Experience') }}
+                    </button>
+                    <button 
+                        @click="switchTab('hobbies')" 
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
+                        :class="{ 'text-white': activeTab === 'hobbies', 'text-gray-400 hover:text-white': activeTab !== 'hobbies' }">
+                        {{ __('Hobbies') }}
                     </button>
                 </div>
             </div>
@@ -52,9 +59,9 @@
                             'opacity-100 visible': activeTab === 'education',
                             'opacity-0 invisible absolute inset-0': activeTab !== 'education'
                          }">
-                        <div class="space-y-8">
+                        <div class="space-y-8" data-aos="fade-up">
                             @foreach($education as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-right" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div>
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
@@ -80,9 +87,29 @@
                             'opacity-100 visible': activeTab === 'experience',
                             'opacity-0 invisible absolute inset-0': activeTab !== 'experience'
                          }">
-                        <div class="space-y-8">
+                        <div class="space-y-8" data-aos="fade-up">
                             @foreach($experience as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-left" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500">
+                                    <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
+                                    <div class="mb-1">
+                                        <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
+                                        <span class="text-purple-400 text-sm">{{ $item['date'] }}</span>
+                                    </div>
+                                    <p class="text-gray-300">{{ $item['description'] }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <!-- Hobbies Panel -->
+                    <div class="transition-all duration-300 ease-out w-full"
+                         :class="{ 
+                            'opacity-100 visible': activeTab === 'hobbies',
+                            'opacity-0 invisible absolute inset-0': activeTab !== 'hobbies'
+                         }">
+                        <div class="space-y-8" data-aos="fade-up">
+                            @foreach($hobbies as $item)
+                                <div class="relative pl-6 border-l-2 border-purple-500">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div class="mb-1">
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>

@@ -11,17 +11,16 @@ class HomeController extends Controller
     {
         $education = [
             [
-                'title' => __('Bachelor Computing Science - Avans Hogeschool'),
-                'description' => __('I pursued a degree in Computing Science, where I developed a strong foundation in software engineering and computer science principles.
-                I also had the opportunity to work on numerous projects, both in a team and individually. These experiences not only enhanced my technical skills, but also taught me valuable lessons in teamwork and project management.'),
-                'date' => 'September 2022 - Present',
-                'location' => 'Den Bosch, Netherlands'
+                'title' => __('Bachelor Computing Science - Avans University of Applied Sciences'),
+                'description' => __('I pursued a degree in Computing Science, where I developed a strong foundation in software engineering and computer science principles. I also had the opportunity to work on numerous projects, both in a team and individually. These experiences not only enhanced my technical skills, but also taught me valuable lessons in teamwork and project management.'),
+                'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
+                'location' => 'Den Bosch ' . __('Netherlands')
             ],
             [
-                'title' => __('HAVO NT - Huygens College'),
+                'title' => __('HAVO - Christiaan Huygens Lyceum'),
                 'description' => __('I completed my secondary education with a focus on Nature & Technology (NT) with Economics. This provided me with a solid analytical and mathematical foundation.'),
-                'date' => 'September 2016 - June 2022',
-                'location' => 'Eindhoven, Netherlands'
+                'date' => __('September') . ' ' .'2016'. ' - ' . __('June') . ' ' .'2022',
+                'location' => 'Eindhoven ' . __('Netherlands')
             ]
         ];
 
@@ -34,8 +33,41 @@ class HomeController extends Controller
             [
                 'title' => __('School Projects'),
                 'description' => __('Developed multiple web applications including a restaurant management system and a website builder.'),
-                'date' => 'September 2023 - Present'
+                'date' => __('September') .' 2023 - ' . __('Present')
             ]
+        ];
+
+        $hobbies = [
+            [
+                'title' => __('Gaming'),
+                'description' => __('Active in gaming communities and indie game scenes. Love exploring new indie titles and keeping up with game design trends.'),
+                'date' => __('2013') .' - ' . __('Present')
+            ],
+            [
+                'title' => __('Game Development'),
+                'description' => __('Started coding games at a young age, evolving from Java to JavaScript projects. Found my stride with Unity, and recently transitioned to Godot. Love using my creativity and making a working game from an idea.'),
+                'date' => __('2016') .' - ' . __('Present')
+            ],
+            [
+                'title' => __('Home Bartender'),
+                'description' => __('Love mixing drinks and trying new recipes. Enjoy experimenting with flavors and learning new techniques to make great cocktails. Building a home bar and sharing drinks with friends.'),
+                'date' => __('2023') .' - ' . __('Present')
+            ],
+            [
+                'title' => __('Motorcycling'),
+                'description' => __('Two wheels, endless roads, and great company. Love discovering hidden routes and sharing road trip adventures with fellow riders.'),
+                'date' => __('2024') .' - ' . __('Present')
+            ],
+            [
+                'title' => __('Kickboxing'),
+                'description' => __('Training in kickboxing to stay active and develop discipline, while learning valuable self-defense skills.'),
+                'date' => __('2024') .' - ' . __('Present')
+            ],
+            [
+                'title' => __('AI Enthusiast'),
+                'description' => __('Exploring and experimenting with emerging AI tools and technologies. Love discovering new ways these tools can enhance creativity and productivity in everyday projects.'),
+                'date' => __('2025') .' - ' . __('Present')
+            ],
         ];
 
         $techStack = [
@@ -148,6 +180,7 @@ class HomeController extends Controller
             ],
         ];
 
-        return view('home', compact('projects', 'education', 'experience', 'techStack'));
+
+        return view('home', compact('projects', 'education', 'experience', 'techStack', 'hobbies'));
     }    
 }
