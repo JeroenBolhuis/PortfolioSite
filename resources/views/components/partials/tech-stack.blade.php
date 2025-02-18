@@ -81,7 +81,7 @@
         <!-- Empty top row -->
         <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
 
@@ -91,13 +91,13 @@
                     :style="gridStyles()" :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
                 <!-- Left padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'left-'+i">
-                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                    <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
 
                 <!-- Tech stack items -->
                 <template x-for="(tech, techIndex) in row" :key="rowIndex+'-'+techIndex">
                     <a :href="tech.url" target="_blank" rel="noopener noreferrer" 
-                        class="group relative aspect-square flex items-center justify-center border border-neutral-900 bg-neutral-950 rounded-lg"
+                        class="group relative aspect-square flex items-center justify-center border border-purple-400/15 bg-neutral-950 rounded-lg"
                         :style="{ '--tech-color': tech.color }">
                         <!-- Glow effect layer -->
                         <div class="absolute -z-10 inset-0 rounded-lg">
@@ -111,7 +111,7 @@
 
                 <!-- Right padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'right-'+i">
-                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                    <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
                 </template>
             </div>
         </template>
@@ -120,7 +120,7 @@
         <div class="grid w-full" :class="techStackRows().length % 2 === 0 ? 'pl-12' : 'pr-12'"
                 :style="gridStyles()" :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
+                <div class="aspect-square border border-purple-400/15 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
         </div>
     </div>
