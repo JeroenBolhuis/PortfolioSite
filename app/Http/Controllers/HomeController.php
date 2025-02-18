@@ -39,15 +39,91 @@ class HomeController extends Controller
         ];
 
         $techStack = [
-            ['name' => 'Laravel', 'class' => 'bg-purple-700/20 text-purple-300', 'url' => 'https://laravel.com'],
-            ['name' => 'Blade', 'class' => 'bg-blue-700/20 text-blue-300', 'url' => 'https://laravel.com/docs/blade'],
-            ['name' => 'Tailwind CSS', 'class' => 'bg-indigo-700/20 text-indigo-300', 'url' => 'https://tailwindcss.com'],
-            ['name' => 'Livewire', 'class' => 'bg-pink-700/20 text-pink-300', 'url' => 'https://livewire.laravel.com'],
-            ['name' => 'Alpine.js', 'class' => 'bg-red-700/20 text-red-300', 'url' => 'https://alpinejs.dev'],
-            ['name' => 'MySQL', 'class' => 'bg-green-700/20 text-green-300', 'url' => 'https://www.mysql.com'],
-            ['name' => 'Vercel', 'class' => 'bg-cyan-700/20 text-cyan-300', 'url' => 'https://vercel.com'],
-            ['name' => 'Supabase', 'class' => 'bg-orange-700/20 text-orange-300', 'url' => 'https://supabase.com'],
-            ['name' => 'Vite', 'class' => 'bg-yellow-700/20 text-yellow-300', 'url' => 'https://vitejs.dev']
+            [
+                'name' => 'Laravel',
+                'image' => '/images/tech/laravel.svg',
+                'url' => 'https://laravel.com',
+                'color' => '#FF2D20'
+            ],
+            [
+                'name' => 'Tailwind CSS',
+                'image' => '/images/tech/tailwind.svg',
+                'url' => 'https://tailwindcss.com',
+                'color' => '#38B2AC'
+            ],
+            [
+                'name' => 'Livewire',
+                'image' => '/images/tech/livewire.svg',
+                'url' => 'https://livewire.laravel.com',
+                'color' => '#FB70A9'
+            ],
+            [
+                'name' => 'Alpine.js',
+                'image' => '/images/tech/alpine.svg',
+                'url' => 'https://alpinejs.dev',
+                'color' => '#77C1D2'
+            ],
+            [
+                'name' => 'MySQL',
+                'image' => '/images/tech/mysql.svg',
+                'url' => 'https://www.mysql.com',
+                'color' => '#00758F'
+            ],
+            [
+                'name' => 'Vercel',
+                'image' => '/images/tech/vercel.svg',
+                'url' => 'https://vercel.com',
+                'color' => '#808080'
+            ],
+            [
+                'name' => 'Supabase',
+                'image' => '/images/tech/supabase.svg',
+                'url' => 'https://supabase.com',
+                'color' => '#3ECF8E'
+            ],
+            [
+                'name' => 'Vite',
+                'image' => '/images/tech/vite.svg',
+                'url' => 'https://vitejs.dev',
+                'color' => '#646CFF'
+            ],
+            [
+                'name' => 'GitHub',
+                'image' => '/images/tech/github.svg',
+                'url' => 'https://github.com',
+                'color' => '#808080'
+            ],
+            [
+                'name' => 'Figma',
+                'image' => '/images/tech/figma.svg',
+                'url' => 'https://figma.com',
+                'color' => '#F24E1E'
+            ],
+            [
+                'name' => 'Node.js',
+                'image' => '/images/tech/nodejs.svg',
+                'url' => 'https://nodejs.org',
+                'color' => '#339933'
+            ],
+            [
+                'name' => 'Redis',
+                'image' => '/images/tech/redis.svg',
+                'url' => 'https://redis.io',
+                'color' => '#C4373A'
+            ],
+            [
+                'name' => 'PostgreSQL',
+                'image' => '/images/tech/postgresql.svg',
+                'url' => 'https://www.postgresql.org',
+                'color' => '#336791'
+            ],
+            [
+                'name' => 'PHPUnit',
+                'image' => '/images/tech/phpunit.svg',
+                'url' => 'https://phpunit.de',
+                'color' => '#952800'
+            ]
+            
         ];
 
         $projects = [

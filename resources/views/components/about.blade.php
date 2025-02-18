@@ -1,6 +1,6 @@
 <!-- About Section -->
 <div id="about" class="section-divider py-20 bg-black/30 backdrop-blur-sm relative">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         
         <!-- Education & Experience Toggle Section -->
@@ -54,11 +54,11 @@
                          }">
                         <div class="space-y-8">
                             @foreach($education as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-right" data-aos-delay="{{ $loop->index * 100 }}">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div>
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
-                                        <span class="text-purple-400 text-sm ml-2">{{ $item['date'] }}</span>
+                                        <span class="text-purple-400 text-sm pl-2">{{ $item['date'] }}</span>
                                     </div>
                                     <p class="text-gray-300 my-2">{{ $item['description'] }}</p>
                                     
@@ -82,7 +82,7 @@
                          }">
                         <div class="space-y-8">
                             @foreach($experience as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-left" data-aos-delay="{{ $loop->index * 100 }}">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div class="mb-1">
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
@@ -96,18 +96,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Tech Stack Section -->
-        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h3 class="text-2xl font-bold text-white mb-6">{{ __('Tech Stack') }}</h3>
-            <div class="flex flex-wrap justify-center gap-3">
-                @foreach($techStack as $tech)
-                    <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
-                       class="px-4 py-2 rounded-full text-sm {{ $tech['class'] }} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20">
-                        {{ $tech['name'] }}
-                    </a>
-                @endforeach
-            </div>
-        </div>
+        @include('components.partials.tech-stack')
     </div>
 </div> 
