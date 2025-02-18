@@ -58,7 +58,7 @@
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div>
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
-                                        <span class="text-purple-400 text-sm ml-2">{{ $item['date'] }}</span>
+                                        <span class="text-purple-400 text-sm pl-2">{{ $item['date'] }}</span>
                                     </div>
                                     <p class="text-gray-300 my-2">{{ $item['description'] }}</p>
                                     
@@ -113,40 +113,31 @@
                 <div class="absolute bottom-0 left-0 h-full w-40 bg-gradient-to-r from-black/30 to-transparent pointer-events-none z-10"></div>
 
                 @php
-                    $smallestRow = 14;
-                    $largestRow = $smallestRow + 1;
-                    $techStackRows = array_chunk($techStack, $smallestRow - 7); // Adjust number of items per row as needed
+                    $rowWidth = 15;
+                    $spacingPerSide = 2;
+                    $maxItemsPerRow = $rowWidth-($spacingPerSide*2);
+                    $techStackRows = array_chunk($techStack, $maxItemsPerRow);
                 @endphp
 
                 <!-- Empty top row -->
-                <div class="grid grid-cols-{{ $largestRow }} gap-8">
-                    @for ($i = 0; $i < $largestRow; $i++)
-                        <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
-                            <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
-                        </div>
+                <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full pr-12">
+                    @for ($i = 0; $i < $rowWidth; $i++)
+                        <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
                     @endfor
                 </div>
 
                 <!-- Tech stack rows -->
                 @foreach($techStackRows as $index => $techStackItems)
-                    @php
-                        $cols = ($index % 2 === 0) ? $smallestRow : $largestRow;
-                        $emptySlots = $cols - count($techStackItems);
-                        $leftPadding = floor($emptySlots / 2);
-                        $rightPadding = ceil($emptySlots / 2);
-                    @endphp
-                    <div class="grid grid-cols-{{ $cols }} gap-8 {{ $cols === $smallestRow ? 'w-[calc((100%-96px))]' : 'w-full' }} mx-auto">
+                    <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full {{ $index % 2 === 0 ? 'pl-12' : 'pr-12' }}">
                         {{-- Left padding empty items --}}
-                        @for($i = 0; $i < $leftPadding; $i++)
-                            <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
-                                <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
-                            </div>
+                        @for($i = 0; $i < ($rowWidth-count($techStackItems))/2; $i++)
+                            <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
                         @endfor
 
                         {{-- Tech stack items --}}
                         @foreach($techStackItems as $tech)
                             <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
-                                class="group relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-105"
+                                class="group relative aspect-square flex items-center justify-center border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-105"
                                 style="--tech-color: {{ $tech['color'] }}">
                                 <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg" 
                                      style="background-color: var(--tech-color)"></div>
@@ -155,24 +146,16 @@
                             </a>
                         @endforeach
 
-                        {{-- Right padding empty items --}}
-                        @for($i = 0; $i < $rightPadding; $i++)
-                            <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
-                                <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
-                            </div>
+                        {{-- Right padding empty items to fill the row --}}
+                        @for($i = 0; $i < ($rowWidth - count($techStackItems))/2; $i++)
+                            <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
                         @endfor
                     </div>
                 @endforeach
 
-                <!-- Empty bottom row -->
-                @php
-                    $lastRowCols = count($techStackRows) % 2 === 0 ? $largestRow : $smallestRow;
-                @endphp
-                <div class="grid grid-cols-{{ $lastRowCols }} gap-8 {{ $lastRowCols === $smallestRow ? 'w-[calc((100%-96px))]' : 'w-full' }} mx-auto">
-                    @for ($i = 0; $i < $lastRowCols; $i++)
-                        <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
-                            <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
-                        </div>
+                <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full {{ count($techStackRows) % 2 === 0 ? 'pl-12' : 'pr-12' }}">
+                    @for ($i = 0; $i < $rowWidth; $i++)
+                        <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
                     @endfor
                 </div>
             </div>
