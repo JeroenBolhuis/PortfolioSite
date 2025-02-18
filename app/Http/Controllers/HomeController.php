@@ -12,7 +12,7 @@ class HomeController extends Controller
         $education = [
             [
                 'title' => __('Bachelor Computing Science - Avans University of Applied Sciences'),
-                'description' => __('I pursued a degree in Computing Science, where I developed a strong foundation in software engineering and computer science principles. I also had the opportunity to work on numerous projects, both in a team and individually. These experiences not only enhanced my technical skills, but also taught me valuable lessons in teamwork and project management.'),
+                'description' => __('Currently pursuing a degree in Computing Science, building a strong foundation in software engineering and computer science principles. Working on various team and individual projects throughout my studies, continuously developing both technical skills and experience in collaborative development and project management.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
                 'location' => 'Den Bosch ' . __('Netherlands')
             ],
