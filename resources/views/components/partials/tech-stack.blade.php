@@ -1,5 +1,5 @@
 <div class="w-full text-center overflow-hidden">
-    <h3 class="text-2xl font-bold text-white mb-4 relative z-30" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
+    <h3 class="text-2xl font-bold text-white relative z-30" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
     
     <div class="relative flex flex-col gap-4 px-4" 
         x-data="{
@@ -68,14 +68,14 @@
             }
         }">
         <!-- Fade overlays -->
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/30 to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/30 to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/30 to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/30 to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 from-30% via-gray-950/50 via-60% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/30 from-30% via-black/15 via-60% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-30% via-gray-950/50 via-60% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/30 from-30% via-black/15 via-60% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-30% via-gray-950/50 via-60% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/30 from-30% via-black/15 via-60% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-30% via-gray-950/50 via-60% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/30 from-30% via-black/15 via-60% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
 
         <!-- Empty top row -->
         <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
@@ -101,7 +101,7 @@
                         <!-- Glow effect layer -->
                         <div class="absolute -z-10 inset-0 rounded-lg">
                             <div class="absolute inset-0 rounded-lg bg-[var(--tech-color)] blur-xl opacity-0 scale-90 
-                                        group-hover:opacity-50 transition-all ease-in-out group-hover:duration-0 duration-[2s]"></div>
+                                        group-hover:opacity-75 transition-all ease-in-out group-hover:duration-0 duration-[2s]"></div>
                         </div>
                         
                         <img :src="tech.image" :alt="tech.name" class="w-[60%] h-[60%] object-contain" style="filter: drop-shadow(0 0 8px var(--tech-color));" />
