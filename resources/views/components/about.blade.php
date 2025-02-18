@@ -96,6 +96,8 @@
                 </div>
             </div>
         </div>
-        @include('components.partials.tech-stack')
     </div>
+    
+    <!-- Tech Stack Section - Full Width -->
+    @include('components.partials.tech-stack')
 </div> 
