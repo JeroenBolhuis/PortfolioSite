@@ -1,5 +1,5 @@
 <!-- About Section -->
-<div id="about" class="section-divider py-20 bg-black/30 backdrop-blur-sm relative">
+<div id="about" class="section-divider py-12 bg-black/40 backdrop-blur-sm relative">
     <div class="container mx-auto">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         

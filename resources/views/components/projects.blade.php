@@ -1,6 +1,6 @@
 <!-- Projects Section -->
-<div id="projects" class="relative py-20">
-    <div class="container mx-auto px-4">
+<div id="projects" class="py-12 overflow-hidden">
+    <div class="container mx-auto px-4 relative">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('My Projects') }}</h2>
         
         <div class="masonry-grid columns-1 lg:columns-2 gap-8 px-4 md:px-20 lg:px-40 max-w-screen-xl mx-auto">

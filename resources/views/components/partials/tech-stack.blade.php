@@ -68,19 +68,19 @@
             }
         }">
         <!-- Fade overlays -->
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 from-30% via-gray-950/50 via-70% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/30 from-30% via-black/15 via-70% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-30% via-gray-950/50 via-70% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/30 from-30% via-black/15 via-70% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-30% via-gray-950/50 via-70% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/30 from-30% via-black/15 via-70% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-30% via-gray-950/50 via-70% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/30 from-30% via-black/15 via-70% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
 
         <!-- Empty top row -->
         <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
             </template>
         </div>
 
@@ -90,18 +90,18 @@
                     :style="gridStyles()" :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
                 <!-- Left padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'left-'+i">
-                    <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
                 </template>
 
                 <!-- Tech stack items -->
                 <template x-for="(tech, techIndex) in row" :key="rowIndex+'-'+techIndex">
                     <a :href="tech.url" target="_blank" rel="noopener noreferrer" 
-                        class="group relative aspect-square flex items-center justify-center border border-neutral-800 bg-neutral-900 rounded-lg"
+                        class="group relative aspect-square flex items-center justify-center border border-neutral-900 bg-neutral-950 rounded-lg"
                         :style="{ '--tech-color': tech.color }">
                         <!-- Glow effect layer -->
                         <div class="absolute -z-10 inset-0 rounded-lg">
-                            <div class="absolute inset-0 rounded-lg bg-[var(--tech-color)] blur-xl opacity-0 scale-90 
-                                        group-hover:opacity-75 transition-all ease-in-out group-hover:duration-0 duration-[2s]"></div>
+                            <div class="absolute inset-0 rounded-lg bg-[var(--tech-color)] blur-xl opacity-0 scale-75 
+                                group-hover:opacity-100 transition-all ease-in-out group-hover:duration-0 duration-[2s]"></div>
                         </div>
                         
                         <img :src="tech.image" :alt="tech.name" class="w-[60%] h-[60%] object-contain" style="filter: drop-shadow(0 0 8px var(--tech-color));" />
@@ -110,7 +110,7 @@
 
                 <!-- Right padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'right-'+i">
-                    <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                    <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
                 </template>
             </div>
         </template>
@@ -119,7 +119,7 @@
         <div class="grid w-full" :class="techStackRows().length % 2 === 0 ? 'pl-12' : 'pr-12'"
                 :style="gridStyles()" :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
             <template x-for="i in cols" :key="i">
-                <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
+                <div class="aspect-square border border-neutral-900 bg-neutral-950 rounded-lg transition-all hover:scale-90 hover:duration-0 duration-[1s]"></div>
             </template>
         </div>
     </div>

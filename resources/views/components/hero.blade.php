@@ -1,7 +1,7 @@
 <!-- Hero Section -->
-<div class="min-h-screen flex items-center justify-center relative overflow-hidden">
+<div class="min-h-screen py-12 flex items-center justify-center relative overflow-hidden bg-black/10 backdrop-blur-[2px]">
     <!-- Animated gradient background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20 opacity-30"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-pink-900/30 opacity-40"></div>
     
     <div class="container mx-auto px-4 relative">
         <div class="flex flex-col lg:flex-row items-center gap-12">

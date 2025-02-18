@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<div id="contact" class="section-divider py-20 bg-black/30 backdrop-blur-sm relative" 
+<div id="contact" class="section-divider py-12 bg-black/40 backdrop-blur-sm relative" 
     x-data="{
         formData: {
             name: '',
