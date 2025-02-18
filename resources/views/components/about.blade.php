@@ -1,5 +1,5 @@
 <!-- About Section -->
-<div id="about" class="border-y border-neutral-900 pt-12 pb-8 bg-black/40 backdrop-blur-sm relative">
+<div id="about" class="border-y border-purple-400/15 pt-12 pb-8 bg-black/40 backdrop-blur-sm relative">
     <div class="container mx-auto">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         

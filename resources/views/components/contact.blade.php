@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<div id="contact" class="border-t border-neutral-900 py-12 bg-black/40 backdrop-blur-sm relative" 
+<div id="contact" class="border-t border-purple-400/15 py-12 bg-black/40 backdrop-blur-sm relative" 
     x-data="{
         formData: {
             name: '',
@@ -73,21 +73,21 @@
                     <label for="name" class="block text-white mb-2">{{ __('Name') }}</label>
                     <input type="text" id="name" x-model="formData.name" required
                         :class="{'border-red-500': errors.name}"
-                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-white/10">
+                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-purple-400/15">
                     <span x-show="errors.name" x-text="errors.name" class="text-red-400 text-sm mt-1"></span>
                 </div>
                 <div>
                     <label for="email" class="block text-white mb-2">{{ __('Email') }}</label>
                     <input type="email" id="email" x-model="formData.email" required
                         :class="{'border-red-500': errors.email}"
-                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-white/10">
+                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-purple-400/15">
                     <span x-show="errors.email" x-text="errors.email" class="text-red-400 text-sm mt-1"></span>
                 </div>
                 <div>
                     <label for="message" class="block text-white mb-2">{{ __('Message') }}</label>
                     <textarea id="message" x-model="formData.message" rows="5" required
                         :class="{'border-red-500': errors.message}"
-                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-white/10"></textarea>
+                        class="w-full px-4 py-3 bg-white/5 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300 border border-purple-400/15"></textarea>
                     <span x-show="errors.message" x-text="errors.message" class="text-red-400 text-sm mt-1"></span>
                 </div>
                 <div class="text-center">
