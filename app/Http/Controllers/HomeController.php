@@ -73,55 +73,7 @@ class HomeController extends Controller
                 'name' => 'Vercel',
                 'image' => '/images/tech/vercel.svg',
                 'url' => 'https://vercel.com',
-                'color' => '#000000'
-            ],
-            [
-                'name' => 'Supabase',
-                'image' => '/images/tech/supabase.svg',
-                'url' => 'https://supabase.com',
-                'color' => '#3ECF8E'
-            ],
-            [
-                'name' => 'Vite',
-                'image' => '/images/tech/vite.svg',
-                'url' => 'https://vitejs.dev',
-                'color' => '#646CFF'
-            ],
-            [
-                'name' => 'Laravel',
-                'image' => '/images/tech/laravel.svg',
-                'url' => 'https://laravel.com',
-                'color' => '#FF2D20'
-            ],
-            [
-                'name' => 'Tailwind CSS',
-                'image' => '/images/tech/tailwind.svg',
-                'url' => 'https://tailwindcss.com',
-                'color' => '#38B2AC'
-            ],
-            [
-                'name' => 'Livewire',
-                'image' => '/images/tech/livewire.svg',
-                'url' => 'https://livewire.laravel.com',
-                'color' => '#FB70A9'
-            ],
-            [
-                'name' => 'Alpine.js',
-                'image' => '/images/tech/alpine.svg',
-                'url' => 'https://alpinejs.dev',
-                'color' => '#77C1D2'
-            ],
-            [
-                'name' => 'MySQL',
-                'image' => '/images/tech/mysql.svg',
-                'url' => 'https://www.mysql.com',
-                'color' => '#00758F'
-            ],
-            [
-                'name' => 'Vercel',
-                'image' => '/images/tech/vercel.svg',
-                'url' => 'https://vercel.com',
-                'color' => '#000000'
+                'color' => '#808080'
             ],
             [
                 'name' => 'Supabase',

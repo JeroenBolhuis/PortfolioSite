@@ -54,7 +54,7 @@
                          }">
                         <div class="space-y-8">
                             @foreach($education as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-right" data-aos-delay="{{ $loop->index * 100 }}">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div>
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
@@ -82,7 +82,7 @@
                          }">
                         <div class="space-y-8">
                             @foreach($experience as $item)
-                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                                <div class="relative pl-6 border-l-2 border-purple-500" data-aos="fade-left" data-aos-delay="{{ $loop->index * 100 }}">
                                     <span class="absolute left-[-9px] top-2 w-4 h-4 bg-purple-500 rounded-full"></span>
                                     <div class="mb-1">
                                         <h4 class="text-xl font-bold text-white inline-block">{{ $item['title'] }}</h4>
@@ -96,69 +96,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Tech Stack Section -->
-        <div class="w-full text-center overflow-hidden" data-aos="fade-up">
-            <h3 class="text-2xl font-bold text-white mb-12">{{ __('Tech Stack') }}</h3>
-            
-            <div class="relative flex flex-col gap-8">
-                <!-- Fade overlays -->
-                <div class="absolute top-0 left-0 h-40 w-full bg-gradient-to-b from-gray-950 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute top-0 left-0 h-40 w-full bg-gradient-to-b from-black/30 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-gray-950 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black/30 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute top-0 right-0 h-full w-40 bg-gradient-to-l from-gray-950 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute top-0 right-0 h-full w-40 bg-gradient-to-l from-black/30 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute bottom-0 left-0 h-full w-40 bg-gradient-to-r from-gray-950 to-transparent pointer-events-none z-10"></div>
-                <div class="absolute bottom-0 left-0 h-full w-40 bg-gradient-to-r from-black/30 to-transparent pointer-events-none z-10"></div>
-
-                @php
-                    $rowWidth = 15;
-                    $spacingPerSide = 2;
-                    $maxItemsPerRow = $rowWidth-($spacingPerSide*2);
-                    $techStackRows = array_chunk($techStack, $maxItemsPerRow);
-                @endphp
-
-                <!-- Empty top row -->
-                <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full pr-12">
-                    @for ($i = 0; $i < $rowWidth; $i++)
-                        <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
-                    @endfor
-                </div>
-
-                <!-- Tech stack rows -->
-                @foreach($techStackRows as $index => $techStackItems)
-                    <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full {{ $index % 2 === 0 ? 'pl-12' : 'pr-12' }}">
-                        {{-- Left padding empty items --}}
-                        @for($i = 0; $i < ($rowWidth-count($techStackItems))/2; $i++)
-                            <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
-                        @endfor
-
-                        {{-- Tech stack items --}}
-                        @foreach($techStackItems as $tech)
-                            <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
-                                class="group relative aspect-square flex items-center justify-center border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-105"
-                                style="--tech-color: {{ $tech['color'] }}">
-                                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg" 
-                                     style="background-color: var(--tech-color)"></div>
-                                <img src="{{ $tech['image'] }}" alt="{{ $tech['name'] }}" 
-                                     class="w-10 h-10 object-contain transition-transform duration-300 group-hover:-translate-y-1" />
-                            </a>
-                        @endforeach
-
-                        {{-- Right padding empty items to fill the row --}}
-                        @for($i = 0; $i < ($rowWidth - count($techStackItems))/2; $i++)
-                            <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
-                        @endfor
-                    </div>
-                @endforeach
-
-                <div class="grid grid-cols-{{ $rowWidth }} gap-8 w-full {{ count($techStackRows) % 2 === 0 ? 'pl-12' : 'pr-12' }}">
-                    @for ($i = 0; $i < $rowWidth; $i++)
-                        <div class="aspect-square border border-neutral-800 bg-neutral-900 rounded-lg transition-all duration-300 hover:scale-90"></div>
-                    @endfor
-                </div>
-            </div>
-        </div>
+        @include('components.partials.tech-stack')
     </div>
 </div> 
