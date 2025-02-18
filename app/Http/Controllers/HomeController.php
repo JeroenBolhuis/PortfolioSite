@@ -86,7 +86,44 @@ class HomeController extends Controller
                 'image' => '/images/tech/vite.svg',
                 'url' => 'https://vitejs.dev',
                 'color' => '#646CFF'
+            ],
+            [
+                'name' => 'GitHub',
+                'image' => '/images/tech/github.svg',
+                'url' => 'https://github.com',
+                'color' => '#808080'
+            ],
+            [
+                'name' => 'Figma',
+                'image' => '/images/tech/figma.svg',
+                'url' => 'https://figma.com',
+                'color' => '#F24E1E'
+            ],
+            [
+                'name' => 'Node.js',
+                'image' => '/images/tech/nodejs.svg',
+                'url' => 'https://nodejs.org',
+                'color' => '#339933'
+            ],
+            [
+                'name' => 'Redis',
+                'image' => '/images/tech/redis.svg',
+                'url' => 'https://redis.io',
+                'color' => '#C4373A'
+            ],
+            [
+                'name' => 'PostgreSQL',
+                'image' => '/images/tech/postgresql.svg',
+                'url' => 'https://www.postgresql.org',
+                'color' => '#336791'
+            ],
+            [
+                'name' => 'PHPUnit',
+                'image' => '/images/tech/phpunit.svg',
+                'url' => 'https://phpunit.de',
+                'color' => '#952800'
             ]
+            
         ];
 
         $projects = [
