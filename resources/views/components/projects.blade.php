@@ -1,5 +1,5 @@
 <!-- Projects Section -->
-<div id="projects" class="py-16 bg-black/20 backdrop-blur-sm relative">
+<div id="projects" class="py-16 bg-black/20 relative">
     <div class="container mx-auto px-4 relative">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-16" data-aos="fade-up">{{ __('My Projects') }}</h2>
         
@@ -9,7 +9,8 @@
                     <div class="glass border-2 border-purple-400/15 rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:border-purple-400/30" data-aos="fade-up">
                         <!-- Image Section -->
                         @if(isset($project['src']))
-                        <div class="relative overflow-hidden">
+                        <div class="relative overflow-hidden cursor-pointer" 
+                             @click="showImageModal = true; currentImage = '{{ asset($project['src']) }}'; currentTitle = '{{ $project['title'] }}'">
                             <img 
                                 src="{{ asset($project['src']) }}" 
                                 class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" 

@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<div id="contact" class="border-t border-purple-400/15 py-16 bg-black/40 backdrop-blur-sm relative" 
+<div id="contact" class="border-t border-purple-400/15 py-16 bg-black/40 relative" 
     x-data="{
         formData: {
             name: '',
@@ -63,7 +63,7 @@
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('Get in Touch') }}</h2>
         <div class="max-w-2xl mx-auto">
             <div x-show="showSuccess" x-cloak x-transition data-aos="fade-up"
-                class="bg-green-500/20 backdrop-blur-sm text-green-300 p-4 rounded-lg mb-6">
+                class="bg-green-500/20 text-green-300 p-4 rounded-lg mb-6">
                 {{ __('Your message has been sent successfully!') }}
             </div>
 
