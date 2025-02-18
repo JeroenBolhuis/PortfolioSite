@@ -1,6 +1,6 @@
 <!-- About Section -->
 <div id="about" class="section-divider py-20 bg-black/30 backdrop-blur-sm relative">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-12" data-aos="fade-up">{{ __('About Me') }}</h2>
         
         <!-- Education & Experience Toggle Section -->
@@ -98,15 +98,83 @@
         </div>
 
         <!-- Tech Stack Section -->
-        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h3 class="text-2xl font-bold text-white mb-6">{{ __('Tech Stack') }}</h3>
-            <div class="flex flex-wrap justify-center gap-3">
-                @foreach($techStack as $tech)
-                    <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
-                       class="px-4 py-2 rounded-full text-sm {{ $tech['class'] }} transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20">
-                        {{ $tech['name'] }}
-                    </a>
+        <div class="w-full text-center overflow-hidden" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-white mb-12">{{ __('Tech Stack') }}</h3>
+            
+            <div class="relative flex flex-col gap-8">
+                <!-- Fade overlays -->
+                <div class="absolute top-0 left-0 h-40 w-full bg-gradient-to-b from-gray-950 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute top-0 left-0 h-40 w-full bg-gradient-to-b from-black/30 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-gray-950 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black/30 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute top-0 right-0 h-full w-40 bg-gradient-to-l from-gray-950 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute top-0 right-0 h-full w-40 bg-gradient-to-l from-black/30 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute bottom-0 left-0 h-full w-40 bg-gradient-to-r from-gray-950 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute bottom-0 left-0 h-full w-40 bg-gradient-to-r from-black/30 to-transparent pointer-events-none z-10"></div>
+
+                @php
+                    $smallestRow = 14;
+                    $largestRow = $smallestRow + 1;
+                    $techStackRows = array_chunk($techStack, $smallestRow - 7); // Adjust number of items per row as needed
+                @endphp
+
+                <!-- Empty top row -->
+                <div class="grid grid-cols-{{ $largestRow }} gap-8">
+                    @for ($i = 0; $i < $largestRow; $i++)
+                        <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
+                            <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
+                        </div>
+                    @endfor
+                </div>
+
+                <!-- Tech stack rows -->
+                @foreach($techStackRows as $index => $techStackItems)
+                    @php
+                        $cols = ($index % 2 === 0) ? $smallestRow : $largestRow;
+                        $emptySlots = $cols - count($techStackItems);
+                        $leftPadding = floor($emptySlots / 2);
+                        $rightPadding = ceil($emptySlots / 2);
+                    @endphp
+                    <div class="grid grid-cols-{{ $cols }} gap-8 {{ $cols === $smallestRow ? 'w-[calc((100%-96px))]' : 'w-full' }} mx-auto">
+                        {{-- Left padding empty items --}}
+                        @for($i = 0; $i < $leftPadding; $i++)
+                            <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
+                                <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
+                            </div>
+                        @endfor
+
+                        {{-- Tech stack items --}}
+                        @foreach($techStackItems as $tech)
+                            <a href="{{ $tech['url'] }}" target="_blank" rel="noopener noreferrer" 
+                                class="group relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-105"
+                                style="--tech-color: {{ $tech['color'] }}">
+                                <div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg" 
+                                     style="background-color: var(--tech-color)"></div>
+                                <img src="{{ $tech['image'] }}" alt="{{ $tech['name'] }}" 
+                                     class="w-10 h-10 object-contain transition-transform duration-300 group-hover:-translate-y-1" />
+                            </a>
+                        @endforeach
+
+                        {{-- Right padding empty items --}}
+                        @for($i = 0; $i < $rightPadding; $i++)
+                            <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
+                                <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
+                            </div>
+                        @endfor
+                    </div>
                 @endforeach
+
+                <!-- Empty bottom row -->
+                @php
+                    $lastRowCols = count($techStackRows) % 2 === 0 ? $largestRow : $smallestRow;
+                @endphp
+                <div class="grid grid-cols-{{ $lastRowCols }} gap-8 {{ $lastRowCols === $smallestRow ? 'w-[calc((100%-96px))]' : 'w-full' }} mx-auto">
+                    @for ($i = 0; $i < $lastRowCols; $i++)
+                        <div class="relative aspect-square flex items-center justify-center border border-white/10 rounded-lg transition-all duration-300 hover:scale-90">
+                            <div class="absolute inset-0 bg-white/5 rounded-lg"></div>
+                        </div>
+                    @endfor
+                </div>
             </div>
         </div>
     </div>

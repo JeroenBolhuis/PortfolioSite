@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
-<body class="flex flex-col text-indigo-400 bg-gradient-to-br from-gray-900 via-gray-950 to-black min-h-screen relative">    
+<body class="flex flex-col text-indigo-400 bg-gray-950 min-h-screen relative">    
     <nav class="bg-black/50 backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-white/5">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
