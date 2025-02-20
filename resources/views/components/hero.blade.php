@@ -7,13 +7,13 @@
         <div class="flex flex-col lg:flex-row items-center gap-12">
             <!-- Left Column -->
             <div class="lg:w-1/2">
-                <h1 class="text-white text-4xl lg:text-7xl font-bold min-h-24 flex items-end">
+                <h1 class="text-white text-4xl lg:text-7xl font-bold">
                     {{ __('Hi, I\'m') }}&nbsp;
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold">
                         Jeroen
                     </span>
                 </h1>
-                <h2 class="text-xl lg:text-2xl text-gray-300 leading-relaxed min-h-8 leading-tight my-2">
+                <h2 class="text-xl lg:text-2xl text-gray-300 leading-relaxed leading-tight my-2">
                     {{ __('A') }}
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold">
                         {{ __(' full-stack ')}}
@@ -32,7 +32,7 @@
                     <p class="text-sm">Eindhoven, {{ __('Netherlands') }}</p>
                 </a>
                 <div class="flex gap-4 my-4">
-                    <a href="#contact" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 hover:scale-105">
+                    <a href="#contact" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-xs sm:text-base font-semibold py-3 px-6 rounded-lg transition duration-300 hover:scale-105">
                         {{ __('Contact Me') }}
                     </a>
                     <a href="https://github.com/JeroenBolhuis" target="_blank" class="bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center gap-2 hover:scale-105">
@@ -48,11 +48,9 @@
             <!-- Right Column -->
             <div class="lg:w-1/2 overflow-hidden">
                 <div class="macbook-container relative mx-auto max-w-full group">
-                    <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.9%; bottom: 7.5%;">
-                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
-                            <source src="{{ asset('images/Animation.mp4') }}" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-neutral-700 bg-opacity-0 xl:bg-opacity-60 transition-opacity duration-300 group-hover:opacity-0 z-10"></div>
+                    <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.7%; bottom: 7.55%;">
+                        <img class="w-full h-full object-cover rounded-lg" src="{{ asset('images/Photo_JeroenBolhuis.jpg') }}" alt="{{ __('Photo of Jeroen Bolhuis') }}"></img>
+                        <div class="absolute inset-0 bg-neutral-700 bg-opacity-0 xl:bg-opacity-30 transition-opacity group-hover:duration-100 duration-[2s] group-hover:opacity-0 z-10"></div>
                     </div>
                     <img class="w-full" src="{{ asset('images/macbook.svg') }}" alt="{{ __('Macbook Frame') }}" />
                 </div>

@@ -1,5 +1,5 @@
 <!-- Projects Section -->
-<div id="projects" class="py-16 bg-black/20 relative">
+<div id="projects" class="py-12 bg-black/20 relative">
     <div class="container mx-auto px-4 relative">
         <h2 class="text-3xl lg:text-5xl text-white font-bold text-center mb-16" data-aos="fade-up">{{ __('My Projects') }}</h2>
         

@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<div id="contact" class="border-t border-purple-400/15 py-16 bg-black/40 relative" 
+<div id="contact" class="border-t border-purple-400/15 py-12 bg-black/40 relative" 
     x-data="{
         formData: {
             name: '',
@@ -67,7 +67,7 @@
                 {{ __('Your message has been sent successfully!') }}
             </div>
 
-            <form @submit.prevent="submitForm()" class="space-y-6 glass p-8 rounded-2xl" data-aos="fade-up">
+            <form @submit.prevent="submitForm()" class="space-y-6 glass px-8 rounded-2xl" data-aos="fade-up">
                 @csrf
                 <div>
                     <label for="name" class="block text-white mb-2">{{ __('Name') }}</label>
