@@ -66,14 +66,14 @@
             }
         }">
         <!-- Fade overlays -->
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
 
         <!-- Empty top row -->
         <div class="grid w-full" :style="{ ...gridStyles(), 'padding-right': `${(squareSize + gap) / 2}px` }" data-aos="fade-right">
