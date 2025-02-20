@@ -2,10 +2,10 @@
     <h3 class="text-2xl font-bold text-white z-20" data-aos="fade-in">{{ __('Tech Stack') }}</h3>
     <p class="text-gray-500 leading-tight z-20" data-aos="fade-in">{{ __('See what I use to build my projects') }}</p>
     
-    <div class="relative flex flex-col gap-4 px-4" 
+    <div class="relative flex flex-col gap-2 xs:gap-4 px-4" 
         x-data="{
             squareSize: window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
-            gap: 16,
+            gap: window.innerWidth < 480 ? 8 : 16,
             minMargin: 16,
             cols: 4,
             techStack: {{ Js::from($techStack) }},
@@ -14,6 +14,7 @@
                 this.updateGridColumns();
                 window.addEventListener('resize', () => {
                     this.squareSize = window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
+                    this.gap = window.innerWidth < 480 ? 12 : 16;
                     this.updateGridColumns();
                 });
             },
@@ -54,10 +55,13 @@
             },
 
             gridStyles() {
+                const dynamicPadding = (this.squareSize + this.gap) / 2;
                 return {
                     'grid-template-columns': `repeat(${this.cols}, ${this.squareSize}px)`,
                     'gap': `${this.gap}px`,
-                    'justify-content': 'center'
+                    'justify-content': 'center',
+                    'padding-left': '0px',
+                    'padding-right': '0px'
                 };
             }
         }">
@@ -72,7 +76,7 @@
         <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-30% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
 
         <!-- Empty top row -->
-        <div class="grid w-full pr-12" :style="gridStyles()" data-aos="fade-right">
+        <div class="grid w-full" :style="{ ...gridStyles(), 'padding-right': `${(squareSize + gap) / 2}px` }" data-aos="fade-right">
             <template x-for="i in cols" :key="i">
                 <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
@@ -80,8 +84,11 @@
 
         <!-- Tech stack rows -->
         <template x-for="(row, rowIndex) in techStackRows()" :key="rowIndex">
-            <div class="grid w-full" :class="rowIndex % 2 === 0 ? 'pl-12' : 'pr-12'" 
-                    :style="gridStyles()" :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
+            <div class="grid w-full" 
+                :style="{ ...gridStyles(), 
+                    [rowIndex % 2 === 0 ? 'padding-left' : 'padding-right']: `${(squareSize + gap) / 2}px`
+                }" 
+                :data-aos="rowIndex % 2 === 0 ? 'fade-left' : 'fade-right'">
                 <!-- Left padding empty items -->
                 <template x-for="i in emptySpaces(row)" :key="rowIndex+'left-'+i">
                     <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
@@ -119,8 +126,11 @@
         </template>
 
         <!-- Empty bottom row -->
-        <div class="grid w-full" :class="techStackRows().length % 2 === 0 ? 'pl-12' : 'pr-12'"
-                :style="gridStyles()" :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
+        <div class="grid w-full" 
+            :style="{ ...gridStyles(), 
+                [techStackRows().length % 2 === 0 ? 'padding-left' : 'padding-right']: `${(squareSize + gap) / 2}px`
+            }" 
+            :data-aos="techStackRows().length % 2 === 0 ? 'fade-left' : 'fade-right'">
             <template x-for="i in cols" :key="i">
                 <div class="aspect-square border border-purple-400/10 bg-neutral-950 rounded-lg transition-transform hover:scale-90 hover:duration-100 duration-[1s]"></div>
             </template>
