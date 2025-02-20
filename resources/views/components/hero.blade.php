@@ -8,7 +8,7 @@
             <!-- Left Column -->
             <div class="lg:w-1/2">
                 <h1 class="text-white text-4xl lg:text-7xl font-bold">
-                    {{ __('Hi, I\'m') }}&nbsp;
+                    {{ __('Hi, I\'m') }}
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold">
                         Jeroen
                     </span>
