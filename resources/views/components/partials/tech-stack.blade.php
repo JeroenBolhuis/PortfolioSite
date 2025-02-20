@@ -4,7 +4,7 @@
     
     <div class="relative flex flex-col gap-4 px-4" 
         x-data="{
-            squareSize: window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
+            squareSize: window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
             gap: 16,
             minMargin: 16,
             cols: 4,
@@ -13,7 +13,7 @@
             init() {
                 this.updateGridColumns();
                 window.addEventListener('resize', () => {
-                    this.squareSize = window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
+                    this.squareSize = window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
                     this.updateGridColumns();
                 });
             },

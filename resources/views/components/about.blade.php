@@ -31,19 +31,19 @@
                     <!-- Buttons -->
                     <button 
                         @click="switchTab('education')" 
-                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-xs xs:text-sm sm:text-base transition-colors duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'education', 'text-gray-400 hover:text-white': activeTab !== 'education' }">
                         {{ __('Education') }}
                     </button>
                     <button 
                         @click="switchTab('experience')" 
-                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-xs xs:text-sm sm:text-base transition-colors duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'experience', 'text-gray-400 hover:text-white': activeTab !== 'experience' }">
                         {{ __('Experience') }}
                     </button>
                     <button 
                         @click="switchTab('hobbies')" 
-                        class="relative px-6 py-2 rounded-full text-white font-medium text-sm sm:text-base transition-all duration-300 z-10"
+                        class="relative px-6 py-2 rounded-full text-white font-medium text-xs xs:text-sm sm:text-base transition-colors duration-300 z-10"
                         :class="{ 'text-white': activeTab === 'hobbies', 'text-gray-400 hover:text-white': activeTab !== 'hobbies' }">
                         {{ __('Hobbies') }}
                     </button>

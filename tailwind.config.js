@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         main: '#0f0214',  // Define your custom color here
       },
+      screens: {
+        xs: '480px', // Define the xs breakpoint
+      },
     },
   },
   plugins: [],
