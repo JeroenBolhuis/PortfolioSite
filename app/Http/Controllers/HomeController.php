@@ -12,15 +12,17 @@ class HomeController extends Controller
         $education = [
             [
                 'title' => __('Bachelor Computing Science - Avans University of Applied Sciences'),
-                'description' => __('Currently pursuing a degree in Computing Science, building a strong foundation in software engineering and computer science principles. Working on various team and individual projects throughout my studies, continuously developing both technical skills and experience in collaborative development and project management.'),
+                'description' => __('Studying Computing Science with a focus on practical software development. Working on real-world projects, from web applications to game development, while learning essential programming concepts.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
-                'location' => 'Den Bosch ' . __('Netherlands')
+                'location' => 'Den Bosch ' . __('Netherlands'),
+                'image' => '/images/avans.jpg'
             ],
             [
                 'title' => __('HAVO - Christiaan Huygens Lyceum'),
                 'description' => __('I completed my secondary education with a focus on Nature & Technology (NT) with Economics. This provided me with a solid analytical and mathematical foundation.'),
                 'date' => __('September') . ' ' .'2016'. ' - ' . __('June') . ' ' .'2022',
-                'location' => 'Eindhoven ' . __('Netherlands')
+                'location' => 'Eindhoven ' . __('Netherlands'),
+                'image' => '/images/huygens.jpg'
             ]
         ];
 
@@ -39,34 +41,40 @@ class HomeController extends Controller
 
         $hobbies = [
             [
-                'title' => __('Gaming'),
-                'description' => __('Active in gaming communities and indie game scenes. Love exploring new indie titles and keeping up with game design trends.'),
-                'date' => __('2013') .' - ' . __('Present')
-            ],
-            [
                 'title' => __('Game Development'),
                 'description' => __('Started coding games at a young age, evolving from Java to JavaScript projects. Found my stride with Unity, and recently transitioned to Godot. Love using my creativity and making a working game from an idea.'),
-                'date' => __('2016') .' - ' . __('Present')
-            ],
-            [
-                'title' => __('Home Bartender'),
-                'description' => __('Love mixing drinks and trying new recipes. Enjoy experimenting with flavors and learning new techniques to make great cocktails. Building a home bar and sharing drinks with friends.'),
-                'date' => __('2023') .' - ' . __('Present')
-            ],
-            [
-                'title' => __('Motorcycling'),
-                'description' => __('Two wheels, endless roads, and great company. Love discovering hidden routes and sharing road trip adventures with fellow riders.'),
-                'date' => __('2024') .' - ' . __('Present')
-            ],
-            [
-                'title' => __('Kickboxing'),
-                'description' => __('Training in kickboxing to stay active and develop discipline, while learning valuable self-defense skills.'),
-                'date' => __('2024') .' - ' . __('Present')
+                'date' => __('2016') .' - ' . __('Present'),
+                'image' => '/images/gamedev.jpg'
             ],
             [
                 'title' => __('AI Enthusiast'),
                 'description' => __('Exploring and experimenting with emerging AI tools and technologies. Love discovering new ways these tools can enhance creativity and productivity in everyday projects.'),
-                'date' => __('2025') .' - ' . __('Present')
+                'date' => __('2023') .' - ' . __('Present'),
+                'image' => '/images/ai.jpg'
+            ],
+            [
+                'title' => __('Gaming'),
+                'description' => __('Active in gaming communities and indie game scenes. Love exploring new indie titles and keeping up with game design trends.'),
+                'date' => __('2013') .' - ' . __('Present'),
+                'image' => '/images/gta.jpg'
+            ],
+            [
+                'title' => __('Home Bartender'),
+                'description' => __('Love mixing drinks and trying new recipes. Enjoy experimenting with flavors and learning new techniques to make great cocktails. Building a home bar and sharing drinks with friends.'),
+                'date' => __('2023') .' - ' . __('Present'),
+                'image' => '/images/Bartender.jpg'
+            ],
+            [
+                'title' => __('Motorcycling'),
+                'description' => __('Two wheels, endless roads, and great company. Love discovering hidden routes and sharing road trip adventures with fellow riders.'),
+                'date' => __('2024') .' - ' . __('Present'),
+                'image' => '/images/motor.jpg'
+            ],
+            [
+                'title' => __('Kickboxing'),
+                'description' => __('Training in kickboxing to stay active and develop discipline, while learning valuable self-defense skills.'),
+                'date' => __('2024') .' - ' . __('Present'),
+                'image' => '/images/kickboxing.webp'
             ],
         ];
 
@@ -161,21 +169,24 @@ class HomeController extends Controller
         $projects = [
             [
                 'title' => __('This Website!'),
-                'technologies' => ['Laravel', 'Blade', 'Tailwind CSS', 'Alpine.js', 'Vite', 'Vercel'],
+                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
+                'technologies' => ['Laravel', 'Tailwind CSS', 'Alpine.js', 'Vercel'],
                 'github' => 'https://github.com/JeroenBolhuis/PortfolioSite'
             ],
             [
-                'src' => 'images/Hetkoppel.png',
+                'image' => 'images/Hetkoppel.png',
+                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
                 'title' => __('Website Builder'),
                 'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
-                'technologies' => ['Laravel', 'Blade', 'Livewire', 'Tailwind CSS', 'MySQL', 'JavaScript', 'Azure', 'Vite'],
-                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder'
+                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'JavaScript', 'Azure'],
+                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
             ],
             [
-                'src' => 'images/Degoudendraak2.png',
+                'image' => 'images/Degoudendraak2.png',
+                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
                 'title' => __('Chinese Restaurant System'),
                 'description' => __('Comprehensive restaurant management system including POS, digital menu tablets, kitchen display system, and online ordering platform. Streamlines operations and enhances customer experience.'),
-                'technologies' => ['Laravel', 'Blade', 'Livewire', 'Tailwind CSS', 'MySQL', 'Vite'],
+                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
                 'github' => 'https://github.com/JeroenBolhuis/DeGoudenDraak'
             ],
         ];

@@ -67,7 +67,7 @@
                 {{ __('Your message has been sent successfully!') }}
             </div>
 
-            <form @submit.prevent="submitForm()" class="space-y-6 glass px-8 rounded-2xl" data-aos="fade-up">
+            <form @submit.prevent="submitForm()" class="space-y-6 glass rounded-2xl" data-aos="fade-up">
                 @csrf
                 <div>
                     <label for="name" class="block text-white mb-2">{{ __('Name') }}</label>

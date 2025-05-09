@@ -9,7 +9,6 @@
     @keydown.escape.window="showImageModal = false">
     @include('components.hero')
     @include('components.about')
-    @include('components.projects')
     @include('components.contact')
     
     @include('components.modals.show-image')

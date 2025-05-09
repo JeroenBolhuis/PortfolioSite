@@ -7,11 +7,11 @@
             @foreach ($projects as $project)
                 <div class="bg-gray-500/5 mb-8 border shadow-lg shadow-purple-400/15 border-purple-400/15 rounded-2xl overflow-hidden" data-aos="fade-up">
                     <!-- Image Section -->
-                    @if(isset($project['src']))
+                    @if(isset($project['image']))
                     <div class="relative overflow-hidden cursor-pointer" 
-                            @click="showImageModal = true; currentImage = '{{ asset($project['src']) }}'; currentTitle = '{{ $project['title'] }}'">
+                            @click="showImageModal = true; currentImage = '{{ asset($project['image']) }}'; currentTitle = '{{ $project['title'] }}'">
                         <img 
-                            src="{{ asset($project['src']) }}" 
+                            image="{{ asset($project['image']) }}" 
                             class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" 
                             alt="{{ $project['title'] }}"
                         >
