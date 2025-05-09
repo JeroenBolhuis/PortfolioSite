@@ -15,14 +15,16 @@ class HomeController extends Controller
                 'description' => __('Studying Computing Science with a focus on practical software development. Working on real-world projects, from web applications to game development, while learning essential programming concepts.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
                 'location' => 'Den Bosch ' . __('Netherlands'),
-                'image' => '/images/avans.jpg'
+                'image' => '/images/avans.jpg',
+                'link' => 'https://www.avans.nl/studeren/opleidingen/informatica/voltijd'
             ],
             [
                 'title' => __('HAVO - Christiaan Huygens Lyceum'),
                 'description' => __('I completed my secondary education with a focus on Nature & Technology (NT) with Economics. This provided me with a solid analytical and mathematical foundation.'),
                 'date' => __('September') . ' ' .'2016'. ' - ' . __('June') . ' ' .'2022',
                 'location' => 'Eindhoven ' . __('Netherlands'),
-                'image' => '/images/huygens.jpg'
+                'image' => '/images/huygens.jpg',
+                'link' => 'https://www.huygenslyceum.nl/'
             ]
         ];
 

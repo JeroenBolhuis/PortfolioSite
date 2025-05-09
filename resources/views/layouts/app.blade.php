@@ -28,9 +28,6 @@
                             <a href="#about" class="block py-2 px-3 text-white hover:text-purple-400 transition-colors duration-300">{{ __('About') }}</a>
                         </li>
                         <li>
-                            <a href="#projects" class="block py-2 px-3 text-white hover:text-purple-400 transition-colors duration-300">{{ __('Projects') }}</a>
-                        </li>
-                        <li>
                             <a href="#contact" class="block py-2 px-3 text-white hover:text-purple-400 transition-colors duration-300">{{ __('Contact') }}</a>
                         </li>
                         <li>
