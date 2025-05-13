@@ -4,7 +4,7 @@
     
     <div class="relative flex flex-col gap-2 xs:gap-4 px-4" 
         x-data="{
-            squareSize: window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
+            squareSize: window.innerWidth < 480 ? 50 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100,
             gap: window.innerWidth < 480 ? 8 : 16,
             minMargin: 16,
             cols: 4,
@@ -13,7 +13,7 @@
             init() {
                 this.updateGridColumns();
                 window.addEventListener('resize', () => {
-                    this.squareSize = window.innerWidth < 480 ? 40 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
+                    this.squareSize = window.innerWidth < 480 ? 50 : window.innerWidth < 640 ? 60 : window.innerWidth < 1280 ? 80 : 100;
                     this.gap = window.innerWidth < 480 ? 12 : 16;
                     this.updateGridColumns();
                 });
@@ -34,7 +34,7 @@
             },
 
             maxItemsPerRow() {
-                const reservedSpaces = window.innerWidth >= 1280 ? 4 : 2;
+                const reservedSpaces = window.innerWidth >= 1280 ? 4 : window.innerWidth >= 480 ? 2 : 0;
                 return Math.max(1, this.cols - reservedSpaces);
             },
 
@@ -48,7 +48,7 @@
             },
 
             emptySpaces(rowItems) {
-                const mandatorySpaces = window.innerWidth >= 1280 ? 2 : 1;
+                const mandatorySpaces = window.innerWidth >= 1280 ? 2 : window.innerWidth >= 480 ? 1 : 0;
                 const remainingSpace = this.cols - rowItems.length - (mandatorySpaces * 2);
                 const extraSpaces = Math.floor(remainingSpace / 2);
                 return mandatorySpaces + extraSpaces;
@@ -70,10 +70,10 @@
         <div class="absolute top-0 left-0 w-full bg-gradient-to-b from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
         <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
         <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ height: overlaySize() }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 right-0 h-full bg-gradient-to-l from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
-        <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="hidden xs:block absolute top-0 right-0 h-full bg-gradient-to-l from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="hidden xs:block absolute top-0 right-0 h-full bg-gradient-to-l from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="hidden xs:block absolute top-0 left-0 h-full bg-gradient-to-r from-gray-950 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
+        <div class="hidden xs:block absolute top-0 left-0 h-full bg-gradient-to-r from-black/40 from-15% to-transparent pointer-events-none z-10" :style="{ width: overlaySize('side') }"></div>
 
         <!-- Empty top row -->
         <div class="grid w-full" :style="{ ...gridStyles(), 'padding-right': `${(squareSize + gap) / 2}px` }" data-aos="fade-right">

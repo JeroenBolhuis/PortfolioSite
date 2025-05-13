@@ -22,7 +22,7 @@
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 font-bold">
                         {{ __(' web')}}
                     </span>
-                    {{ __('solutions.') }}
+                    {{ __('applications.') }}
                 </h2>
                 <a href="https://www.google.com/maps/search/?api=1&query=Eindhoven%2C+Netherlands" target="_blank" class="flex items-center gap-1 text-gray-300 hover:text-purple-400 duration-300">
                     <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
