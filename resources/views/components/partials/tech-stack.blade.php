@@ -96,7 +96,7 @@
 
                 <!-- Tech stack items -->
                 <template x-for="(tech, techIndex) in row" :key="rowIndex+'-'+techIndex">
-                    <a :href="tech.url" target="_blank" rel="noopener noreferrer" 
+                    <a :href="tech.url" target="_blank" rel="noopener noreferrer nofollow" 
                         class="group relative aspect-square flex items-center justify-center border border-purple-400/10 bg-neutral-950 rounded-lg transform-gpu"
                         :style="{ '--tech-color': tech.color }">
                         <!-- Glow effect layer -->
@@ -110,9 +110,10 @@
                         </div>
                         
                         <div class="flex items-center justify-center w-full h-full bg-neutral-950 rounded-lg">
-                            <img :src="tech.image" :alt="tech.name" 
+                            <img :src="tech.image" :alt="tech.name + ' logo'"
                                 loading="lazy"
-                                class="w-[60%] h-[60%] object-contain transform-gpu" 
+                                width="48" height="48"
+                                class="w-[60%] h-[60%] object-contain transform-gpu"
                                 style="filter: drop-shadow(0 0 8px var(--tech-color));" />
                         </div>
                     </a>

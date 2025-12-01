@@ -1,2 +1,30 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Block access to sensitive Laravel directories
+Disallow: /app/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /routes/
+Disallow: /storage/
+Disallow: /tests/
+Disallow: /vendor/
+
+# Block access to common files
+Disallow: /*.env*
+Disallow: /*.log
+Disallow: /*.sql
+Disallow: /artisan
+Disallow: /composer.*
+Disallow: /package.json
+Disallow: /phpunit.xml
+Disallow: /webpack.mix.js
+
+# Block access to version control
+Disallow: /.git/
+Disallow: /.github/
+
+# Sitemap
+Sitemap: https://webdevsite.nl/sitemap.xml

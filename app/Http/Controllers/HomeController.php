@@ -75,7 +75,7 @@ class HomeController extends Controller
             [
                 'title' => __('Kickboxing'),
                 'description' => __('Training in kickboxing to stay active and develop discipline, while learning valuable self-defense skills.'),
-                'date' => __('2024') .' - ' . __('Present'),
+                'date' => __('2024') .' - ' . __('2025'),
                 'image' => '/images/kickboxing.webp'
             ],
         ];

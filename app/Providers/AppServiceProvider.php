@@ -22,5 +22,8 @@ class AppServiceProvider extends ServiceProvider
         if (\App::environment('production')) {
             \URL::forceScheme('https');
         }
+
+        // Remove X-Powered-By header for security
+        header_remove('X-Powered-By');
     }
 }

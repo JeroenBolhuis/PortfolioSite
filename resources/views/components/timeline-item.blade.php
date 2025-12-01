@@ -16,10 +16,12 @@
         <div class="absolute inset-0 bg-gradient-to-br from-black/95 to-black/70 z-10"></div>
         @if($image)
             <div class="absolute inset-0">
-                <img src="{{ asset($image) }}" 
-                     alt="{{ $title }}"
+                <img src="{{ asset($image) }}"
+                     alt="{{ __('Image related to') }} {{ $title }}"
                      loading="lazy"
-                     class="w-full h-full object-cover">
+                     class="w-full h-full object-cover object-center"
+                     width="400"
+                     height="300">
             </div>
         @else
             <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500"></div>
@@ -28,8 +30,8 @@
         <div class="relative z-20 p-6">
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
                 <div class="flex-grow flex flex-col gap-2">
-                    <h3 class="text-xl font-bold text-white inline-block">{{ $title }}
-                    <span class="text-purple-400 text-sm font-normal">{{ $date }}</span></h3>
+                    <h3 class="text-xl font-bold text-white">{{ $title }}</h3>
+                    <span class="text-purple-400 text-sm font-normal">{{ $date }}</span>
                     
                     @if($description)
                         <p class="text-gray-300 leading-relaxed">
@@ -38,7 +40,7 @@
                     @endif
                     
                     @if($location)
-                        <a href="https://www.google.com/maps/search/?api=1&query={{$location}}" target="_blank" class="flex items-center gap-1 text-gray-300 hover:text-purple-400">
+                        <a href="https://www.google.com/maps/search/?api=1&query={{$location}}" target="_blank" rel="noopener noreferrer nofollow" class="flex items-center gap-1 text-gray-300 hover:text-purple-400">
                             <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -64,7 +66,7 @@
                 @if($link || $github)
                     <div class="flex-shrink-0 flex sm:flex-col gap-2">
                         @if($link)
-                            <a href="{{ $link }}" target="_blank" rel="noopener noreferrer"
+                            <a href="{{ $link }}" target="_blank" rel="noopener noreferrer nofollow"
                                 class="p-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg text-white transition-all duration-300"
                                 aria-label="{{ __('Visit') }} {{ $title }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,7 +75,7 @@
                             </a>
                         @endif
                         @if($github)
-                            <a href="{{ $github }}" target="_blank" rel="noopener noreferrer"
+                            <a href="{{ $github }}" target="_blank" rel="noopener noreferrer nofollow"
                                 class="p-2 bg-white/[0.05] hover:bg-white/[0.1] border border-purple-500/20 rounded-lg text-white transition-all duration-300"
                                 aria-label="{{ __('View') }} {{ $title }} {{ __('on GitHub') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">

@@ -22,7 +22,7 @@
             <img :src="currentImage" 
                 :alt="currentTitle"
                 class="w-full h-auto max-h-[75vh] object-contain rounded-lg">
-            <h4 class="text-white/90 text-lg font-medium mt-4 text-center" x-text="currentTitle"></h4>
+            <h4 class="text-white/90 text-lg font-medium mt-4 text-center" x-text="currentTitle || 'Image'"></h4>
         </div>
     </div>
 </div>
