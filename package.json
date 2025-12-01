@@ -16,14 +16,9 @@
         "vite": "^5.0"
     },
     "dependencies": {
-        "aos": "^3.0.0-beta.6",
-        "imagesloaded": "^5.0.0",
-        "rollup": "^3.29.0"
+        "aos": "^3.0.0-beta.6"
     },
     "engines": {
         "node": "18.x"
-    },
-    "optionalDependencies": {
-        "@rollup/rollup-linux-x64-gnu": "latest"
     }
 }

@@ -2,8 +2,8 @@
     @php
         $currentLocale = Session::get('locale', 'en');
         $locales = [
-            'en' => ['flag' => 'images/united-kingdom.png', 'label' => 'English'],
-            'nl' => ['flag' => 'images/netherlands.png', 'label' => 'Nederlands'],
+            'en' => ['flag' => 'images/united-kingdom.webp', 'label' => 'English'],
+            'nl' => ['flag' => 'images/netherlands.webp', 'label' => 'Nederlands'],
         ];
     @endphp
 

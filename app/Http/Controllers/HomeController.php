@@ -15,7 +15,7 @@ class HomeController extends Controller
                 'description' => __('Studying Computing Science with a focus on practical software development. Working on real-world projects, from web applications to game development, while learning essential programming concepts.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
                 'location' => 'Den Bosch ' . __('Netherlands'),
-                'image' => '/images/avans.jpg',
+                'image' => '/images/avans.webp',
                 'link' => 'https://www.avans.nl/studeren/opleidingen/informatica/voltijd'
             ],
             [
@@ -23,7 +23,7 @@ class HomeController extends Controller
                 'description' => __('I completed my secondary education with a focus on Nature & Technology (NT) with Economics. This provided me with a solid analytical and mathematical foundation.'),
                 'date' => __('September') . ' ' .'2016'. ' - ' . __('June') . ' ' .'2022',
                 'location' => 'Eindhoven ' . __('Netherlands'),
-                'image' => '/images/huygens.jpg',
+                'image' => '/images/huygens.webp',
                 'link' => 'https://www.huygenslyceum.nl/'
             ]
         ];
@@ -46,31 +46,31 @@ class HomeController extends Controller
                 'title' => __('Game Development'),
                 'description' => __('Started coding games at a young age, evolving from Java to JavaScript projects. Found my stride with Unity, and recently transitioned to Godot. Love using my creativity and making a working game from an idea.'),
                 'date' => __('2016') .' - ' . __('Present'),
-                'image' => '/images/gamedev.jpg'
+                'image' => '/images/gamedev.webp'
             ],
             [
                 'title' => __('AI Enthusiast'),
                 'description' => __('Exploring and experimenting with emerging AI tools and technologies. Love discovering new ways these tools can enhance creativity and productivity in everyday projects.'),
                 'date' => __('2023') .' - ' . __('Present'),
-                'image' => '/images/ai.jpg'
+                'image' => '/images/ai.webp'
             ],
             [
                 'title' => __('Gaming'),
                 'description' => __('Active in gaming communities and indie game scenes. Love exploring new indie titles and keeping up with game design trends.'),
                 'date' => __('2013') .' - ' . __('Present'),
-                'image' => '/images/gta.jpg'
+                'image' => '/images/gta.webp'
             ],
             [
                 'title' => __('Home Bartender'),
                 'description' => __('Love mixing drinks and trying new recipes. Enjoy experimenting with flavors and learning new techniques to make great cocktails. Building a home bar and sharing drinks with friends.'),
                 'date' => __('2023') .' - ' . __('Present'),
-                'image' => '/images/Bartender.jpg'
+                'image' => '/images/Bartender.webp'
             ],
             [
                 'title' => __('Motorcycling'),
                 'description' => __('Two wheels, endless roads, and great company. Love discovering hidden routes and sharing road trip adventures with fellow riders.'),
                 'date' => __('2024') .' - ' . __('Present'),
-                'image' => '/images/motor.jpg'
+                'image' => '/images/motor.webp'
             ],
             [
                 'title' => __('Kickboxing'),
@@ -176,7 +176,7 @@ class HomeController extends Controller
                 'github' => 'https://github.com/JeroenBolhuis/PortfolioSite'
             ],
             [
-                'image' => 'images/Hetkoppel.png',
+                'image' => 'images/Hetkoppel.webp',
                 'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
                 'title' => __('Website Builder'),
                 'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
@@ -184,7 +184,7 @@ class HomeController extends Controller
                 'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
             ],
             [
-                'image' => 'images/Degoudendraak2.png',
+                'image' => 'images/Degoudendraak2.webp',
                 'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
                 'title' => __('Chinese Restaurant System'),
                 'description' => __('Comprehensive restaurant management system including POS, digital menu tablets, kitchen display system, and online ordering platform. Streamlines operations and enhances customer experience.'),
