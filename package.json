@@ -19,6 +19,6 @@
         "aos": "^3.0.0-beta.6"
     },
     "engines": {
-        "node": "18.x"
+        "node": "22.x"
     }
 }

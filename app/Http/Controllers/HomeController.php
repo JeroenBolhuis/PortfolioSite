@@ -176,7 +176,7 @@ class HomeController extends Controller
                 'github' => 'https://github.com/JeroenBolhuis/PortfolioSite'
             ],
             [
-                'image' => 'images/Hetkoppel.webp',
+                'image' => 'images/HetKoppel.webp',
                 'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
                 'title' => __('Website Builder'),
                 'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
