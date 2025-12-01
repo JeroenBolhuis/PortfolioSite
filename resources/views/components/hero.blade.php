@@ -49,7 +49,7 @@
             <div class="lg:w-1/2 overflow-hidden">
                 <div class="macbook-container relative mx-auto max-w-full group">
                     <div class="macbook-screen absolute inset-0 overflow-hidden" style="top: 7%; left: 1.75%; right: 4.7%; bottom: 7.55%;">
-                        <img class="w-full h-full object-cover rounded-sm" src="{{ asset('images/Photo_JeroenBolhuis.png') }}" alt="{{ __('Photo of Jeroen Bolhuis') }}"></img>
+                        <img class="w-full h-full object-cover rounded-sm" src="{{ asset('images/Photo_JeroenBolhuis.webp') }}" alt="{{ __('Photo of Jeroen Bolhuis') }}"></img>
                         <div class="absolute inset-0 bg-neutral-700 bg-opacity-0 xl:bg-opacity-30 transition-opacity group-hover:duration-100 duration-[2s] group-hover:opacity-0 z-10"></div>
                     </div>
                     <img class="w-full" src="{{ asset('images/macbook.svg') }}" alt="{{ __('Macbook Frame') }}" />
