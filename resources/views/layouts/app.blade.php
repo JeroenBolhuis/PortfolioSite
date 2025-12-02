@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jeroen Bolhuis - Full-stack developer based in Eindhoven, Netherlands. Creating modern web applications with expertise in Laravel, Livewire, PHP, and Tailwind CSS.">
+    <meta name="description" content="Jeroen Bolhuis - Full-stack developer based in Eindhoven, NL. Creating modern web applications with expertise in Laravel, Livewire, and Tailwind CSS.">
     <meta name="keywords" content="Jeroen Bolhuis, full-stack developer, web developer, Laravel developer, PHP developer, JavaScript developer, React developer, Livewire, portfolio, Eindhoven, Netherlands, web applications, software development">
     <meta name="author" content="Jeroen Bolhuis">
     <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://webdevsite.nl/">
     <meta property="og:title" content="Jeroen Bolhuis - Full-Stack Developer | Laravel PHP JavaScript Portfolio">
-    <meta property="og:description" content="Full-stack developer based in Eindhoven, Netherlands. Creating modern web applications with expertise in Laravel, Livewire, PHP, JavaScript, and React.">
+    <meta property="og:description" content="Full-stack developer based in Eindhoven, NL. Creating modern web applications with expertise in Laravel, Livewire, and Tailwind CSS.">
     <meta property="og:image" content="https://webdevsite.nl/images/Photo_JeroenBolhuis.webp">
     <meta property="og:site_name" content="Jeroen Bolhuis Portfolio">
 
@@ -22,7 +22,7 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://webdevsite.nl/">
     <meta property="twitter:title" content="Jeroen Bolhuis - Full-Stack Developer | Laravel PHP JavaScript Portfolio">
-    <meta property="twitter:description" content="Full-stack developer based in Eindhoven, Netherlands. Creating modern web applications with expertise in Laravel, Livewire, PHP, JavaScript, and React.">
+    <meta property="twitter:description" content="Full-stack developer based in Eindhoven, NL. Creating modern web applications with expertise in Laravel, Livewire, and Tailwind CSS.">
     <meta property="twitter:image" content="https://webdevsite.nl/images/Photo_JeroenBolhuis.webp">
     <meta property="twitter:creator" content="@_jeroentjeb_">
     <title>@yield('title', __('Jeroen Bolhuis - Full-Stack Dev | Portfolio | Eindhoven NL'))</title>
