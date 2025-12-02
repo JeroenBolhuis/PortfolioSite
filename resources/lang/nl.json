@@ -73,5 +73,6 @@
     "Netherlands": "Nederland",
 
     "Technology stack": "Technologie Stack",
-    "See what I use to build my projects": "Zie wat ik gebruik om mijn projecten te bouwen"
+    "See what I use to build my projects": "Zie wat ik gebruik om mijn projecten te bouwen",
+    "Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.": "Ontwikkelde een probleemrapportage functie voor :link, een B2B-platform voor leveranciers en retailers. Verbeterde klantenservice mogelijkheden met snellere probleemoplossing met behulp van Laravel en moderne webtechnologieën."
 }

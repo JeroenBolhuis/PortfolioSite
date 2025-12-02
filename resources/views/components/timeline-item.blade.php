@@ -34,8 +34,8 @@
                     <span class="text-purple-400 text-sm font-normal">{{ $date }}</span>
                     
                     @if($description)
-                        <p class="text-gray-300 leading-relaxed">
-                            {{ $description }}
+                        <p class="timeline-description text-gray-300 leading-relaxed">
+                            {!! $description !!}
                         </p>
                     @endif
                     

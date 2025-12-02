@@ -129,9 +129,7 @@
                 <div class="flex flex-col gap-4">
                     <p>&copy; {{ date('Y') }} {{ __('Jeroen Bolhuis') }}. {{ __('All rights reserved.') }}</p>
                     <div class="flex flex-wrap gap-6 text-sm">
-                        <a href="#about" class="hover:text-purple-400 transition-colors duration-300">{{ __('About') }}</a>
-                        <a href="#projects" class="hover:text-purple-400 transition-colors duration-300">{{ __('Projects') }}</a>
-                        <a href="#contact" class="hover:text-purple-400 transition-colors duration-300">{{ __('Contact') }}</a>
+                        <a href="#hero" class="hover:text-purple-400 transition-colors duration-300">{{ __('Home') }}</a>
                     </div>
                 </div>
                 <div class="flex space-x-6">

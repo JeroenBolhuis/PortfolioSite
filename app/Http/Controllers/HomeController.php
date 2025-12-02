@@ -29,10 +29,10 @@ class HomeController extends Controller
         $experiences = [
             [
                 'title' => __('Internship - Moonly Software'),
-                'description' => __('Researching and developing a new feature for Ethnico, a platform for suppliers, distributors and retailers to sell and buy products. So customers can report issues easily and get a solution faster.'),
+                'description' =>__('Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.', ['link' => '<a href="https://app.ethnicogroup.com" target="_blank">Ethnico</a>']),
                 'date' => __('September') .' 2025 - ' . __('January') . ' ' .'2026',
                 'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
-                'link' => 'https://app.ethnicogroup.com',
+                'link' => 'https://moonlysoftware.com',
                 'image' => '/images/moonly.webp'
             ],
             [
