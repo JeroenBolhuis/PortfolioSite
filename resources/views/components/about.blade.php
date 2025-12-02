@@ -80,15 +80,15 @@
                             'opacity-0 invisible absolute inset-0': activeTab !== 'experience'
                          }">
                         <div class="space-y-8" data-aos="fade-up">
-                            @foreach($projects as $project)
+                            @foreach($experiences as $experience)
                                 <x-timeline-item
-                                    :title="$project['title']"
-                                    :date="$project['date']"
-                                    :description="$project['description'] ?? null"
-                                    :image="$project['image'] ?? null"
-                                    :technologies="$project['technologies'] ?? null"
-                                    :link="$project['link'] ?? null"
-                                    :github="$project['github'] ?? null"
+                                    :title="$experience['title']"
+                                    :date="$experience['date']"
+                                    :description="$experience['description'] ?? null"
+                                    :image="$experience['image'] ?? null"
+                                    :technologies="$experience['technologies'] ?? null"
+                                    :link="$experience['link'] ?? null"
+                                    :github="$experience['github'] ?? null"
                                 />
                             @endforeach
                         </div>

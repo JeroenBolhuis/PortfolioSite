@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -28,17 +26,31 @@ class HomeController extends Controller
             ]
         ];
 
-        $experience = [
-            // [
-            //     'title' => __('Web Developer - Recrateam'),
-            //     'description' => __(''),
-            //     'date' => 'December 2024 - Present'
-            // ],
+        $experiences = [
             [
-                'title' => __('School Projects'),
-                'description' => __('Developed multiple web applications including a restaurant management system and a website builder.'),
-                'date' => __('September') .' 2023 - ' . __('Present')
-            ]
+                'title' => __('Internship - Moonly Software'),
+                'description' => __('Researching and developing a new feature for Ethnico, a platform for suppliers, distributors and retailers to sell and buy products. So customers can report issues easily and get a solution faster.'),
+                'date' => __('September') .' 2025 - ' . __('January') . ' ' .'2026',
+                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
+                'link' => 'https://app.ethnicogroup.com',
+                'image' => '/images/moonly.webp'
+            ],
+            [
+                'image' => 'images/HetKoppel.webp',
+                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
+                'title' => __('Website Builder'),
+                'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
+                'technologies' => ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL'],
+                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
+            ],
+            [
+                'image' => 'images/Degoudendraak2.webp',
+                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
+                'title' => __('Chinese Restaurant System'),
+                'description' => __('Comprehensive restaurant management system including POS, digital menu tablets, kitchen display system, and online ordering platform. Streamlines operations and enhances customer experience.'),
+                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
+                'github' => 'https://github.com/JeroenBolhuis/DeGoudenDraak'
+            ],
         ];
 
         $hobbies = [
@@ -168,32 +180,7 @@ class HomeController extends Controller
             
         ];
 
-        $projects = [
-            [
-                'title' => __('This Website!'),
-                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
-                'technologies' => ['Laravel', 'Tailwind CSS', 'Alpine.js', 'Vercel'],
-                'github' => 'https://github.com/JeroenBolhuis/PortfolioSite'
-            ],
-            [
-                'image' => 'images/HetKoppel.webp',
-                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
-                'title' => __('Website Builder'),
-                'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
-                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'JavaScript', 'Azure'],
-                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
-            ],
-            [
-                'image' => 'images/Degoudendraak2.webp',
-                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
-                'title' => __('Chinese Restaurant System'),
-                'description' => __('Comprehensive restaurant management system including POS, digital menu tablets, kitchen display system, and online ordering platform. Streamlines operations and enhances customer experience.'),
-                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
-                'github' => 'https://github.com/JeroenBolhuis/DeGoudenDraak'
-            ],
-        ];
 
-
-        return view('home', compact('projects', 'education', 'experience', 'techStack', 'hobbies'));
+        return view('home', compact('education', 'experiences', 'techStack', 'hobbies'));
     }    
 }
