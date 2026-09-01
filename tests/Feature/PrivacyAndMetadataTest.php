@@ -43,7 +43,14 @@ class PrivacyAndMetadataTest extends TestCase
             ->assertOk()
             ->assertSee('september 2026 - januari 2027')
             ->assertSee('september 2022 - heden')
-            ->assertSee('mei 2025 - heden')
-            ->assertDontSee('May 2025 - Heden');
+            ->assertSee('september 2025 - heden')
+            ->assertSee('juli 2026')
+            ->assertSee('februari 2025 - april 2025')
+            ->assertSee('mei 2025 - juli 2025')
+            ->assertDontSee('May 2025 - Heden')
+            ->assertDontSee('February 2025')
+            ->assertDontSee('April 2025')
+            ->assertDontSee('July 2025')
+            ->assertDontSee('July 2026');
     }
 }

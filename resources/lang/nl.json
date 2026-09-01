@@ -109,8 +109,11 @@
     "Spain": "Spanje",
     "September": "september",
     "January": "januari",
+    "February": "februari",
+    "April": "april",
     "June": "juni",
     "May": "mei",
+    "July": "juli",
 
     "Minor Business Administration and Management - Universidad Rey Juan Carlos": "Minor Business Administration and Management - Universidad Rey Juan Carlos",
     "Semester-long minor in Business Administration and Management (Administración y Dirección de Empresas) at Campus Madrid-Vicálvaro.": "Minor van een semester in Business Administration and Management (Administración y Dirección de Empresas) op Campus Madrid-Vicálvaro.",
@@ -134,5 +137,7 @@
     "Relational database with stronger types and JSON than MySQL, often via Supabase.": "Relationele database met sterkere types en JSON dan MySQL, vaak via Supabase.",
     "PHP testing framework on top of PHPUnit, with a cleaner syntax for Laravel tests.": "PHP-testframework bovenop PHPUnit, met een schonere syntax voor Laravel-tests.",
     "DNS, CDN, TLS, and bot protection in front of sites.": "DNS, CDN, TLS en botbescherming voor sites.",
-    "Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.": "Ontwikkelde een probleemrapportage functie voor :link, een B2B-platform voor leveranciers en retailers. Verbeterde klantenservice mogelijkheden met snellere probleemoplossing met behulp van Laravel en moderne webtechnologieën."
+    "Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.": "Ontwikkelde een probleemrapportage functie voor :link, een B2B-platform voor leveranciers en retailers. Verbeterde klantenservice mogelijkheden met snellere probleemoplossing met behulp van Laravel en moderne webtechnologieën.",
+    "Developed RecraHub, the platform Recrateam uses to plan entertainment programmes for campsites, holiday parks and hotels. It covers programme planning, staff rosters, print-ready booklets and integrations with guest apps and websites.": "RecraHub ontwikkeld, het platform dat Recrateam gebruikt om entertainmentprogramma's te plannen voor campings, vakantieparken en hotels. Het biedt programmaplanning, personeelsroosters, drukklare boekjes en koppelingen met gast-apps en websites.",
+    "I built a straightforward website for my uncle's motorcycle workshop hobby. MotorKlusSchuur is a small garage in Soerendonk, focused on careful maintenance and repair of mostly older bikes in the Weert area.": "Ik heb een overzichtelijke website gemaakt voor de motorwerkplaats van mijn oom, die hij als hobby runt. MotorKlusSchuur is een kleinschalige garage in Soerendonk, gericht op aandachtig onderhoud en reparatie van vooral oudere motoren in de regio Weert."
 }

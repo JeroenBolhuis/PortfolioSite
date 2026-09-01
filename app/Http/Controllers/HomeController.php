@@ -36,6 +36,22 @@ class HomeController extends Controller
 
         $experiences = [
             [
+                'title' => 'RecraHub',
+                'description' => __('Developed RecraHub, the platform Recrateam uses to plan entertainment programmes for campsites, holiday parks and hotels. It covers programme planning, staff rosters, print-ready booklets and integrations with guest apps and websites.'),
+                'date' => __('September') . ' 2025 - ' . __('Present'),
+                'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'Alpine.js'],
+                'link' => 'https://www.recrahub.nl/',
+                'image' => '/images/recrahub.webp'
+            ],
+            [
+                'title' => 'MotorKlusSchuur',
+                'description' => __('I built a straightforward website for my uncle\'s motorcycle workshop hobby. MotorKlusSchuur is a small garage in Soerendonk, focused on careful maintenance and repair of mostly older bikes in the Weert area.'),
+                'date' => __('July') . ' 2026',
+                'technologies' => ['Astro', 'Tailwind CSS'],
+                'link' => 'https://motorklusschuur.nl/',
+                'image' => '/images/motorklusschuur.webp'
+            ],
+            [
                 'title' => __('Internship - Moonly Software'),
                 'description' =>__('Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.', ['link' => '<a href="https://app.ethnicogroup.com" target="_blank">Ethnico</a>']),
                 'date' => __('September') .' 2025 - ' . __('January') . ' ' .'2026',
@@ -44,20 +60,20 @@ class HomeController extends Controller
                 'image' => '/images/moonly.webp'
             ],
             [
-                'image' => 'images/HetKoppel.webp',
-                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
-                'title' => __('Website Builder'),
-                'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
-                'technologies' => ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL'],
-                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
-            ],
-            [
                 'image' => 'images/Degoudendraak2.webp',
-                'date' => __('May') . ' ' .'2025'. ' - ' . __('Present'),
+                'date' => __('May') . ' 2025 - ' . __('July') . ' 2025',
                 'title' => __('Chinese Restaurant System'),
                 'description' => __('Comprehensive restaurant management system including POS, digital menu tablets, kitchen display system, and online ordering platform. Streamlines operations and enhances customer experience.'),
                 'technologies' => ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL'],
                 'github' => 'https://github.com/JeroenBolhuis/DeGoudenDraak'
+            ],
+            [
+                'image' => 'images/HetKoppel.webp',
+                'date' => __('February') . ' 2025 - ' . __('April') . ' 2025',
+                'title' => __('Website Builder'),
+                'description' => __('Developed a custom website builder for Het Koppel student association. Features include drag-and-drop interface, custom themes, and content management system. Built with Laravel.'),
+                'technologies' => ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL'],
+                'github' => 'https://github.com/JeroenBolhuis/WebsiteBuilder',
             ],
         ];
 
