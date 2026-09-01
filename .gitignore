@@ -13,6 +13,7 @@
 /.zed
 /auth.json
 /node_modules
+/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -22,16 +23,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-# Vercel
 .vercel
-
-# Vite / npm
-npm-debug.log*
-yarn-error.log
-yarn-debug.log*
-
-# Design tooling and local review captures
 .impeccable/
-
-# Generated CSS from `npm run build:css`
 /public/css
