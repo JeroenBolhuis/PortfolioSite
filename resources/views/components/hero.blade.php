@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<div id="hero" class="min-h-screen pt-32 pb-6 flex items-center justify-center relative sm:pt-28 md:pb-20 lg:pt-12">
+<div id="hero" class="min-h-screen pt-32 pb-2 flex items-center justify-center relative sm:pt-28 md:pb-20 lg:pt-12">
 
     <div class="container mx-auto px-4 relative">
         <div class="flex flex-col lg:flex-row items-center gap-12">
