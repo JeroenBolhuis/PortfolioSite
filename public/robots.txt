@@ -27,4 +27,4 @@ Disallow: /.git/
 Disallow: /.github/
 
 # Sitemap
-Sitemap: https://webdevsite.nl/sitemap.xml
+Sitemap: https://www.jeroen-bolhuis.nl/sitemap.xml

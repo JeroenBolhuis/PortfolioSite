@@ -15,6 +15,9 @@
         "vite": "^7.2.6"
     },
     "dependencies": {
+        "@fontsource/archivo": "^5.3.0",
+        "@fontsource/azeret-mono": "^5.3.0",
+        "alpinejs": "^3.17.1",
         "aos": "^3.0.0-beta.6"
     },
     "engines": {

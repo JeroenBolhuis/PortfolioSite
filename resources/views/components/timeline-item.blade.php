@@ -10,8 +10,8 @@
 ])
 
 <article class="relative pl-7">
-    <span class="timeline-line absolute left-0 top-6 -bottom-6 w-px bg-oxide/30" aria-hidden="true"></span>
-    <span class="absolute left-[-5px] top-6 w-3 h-3 rounded-full bg-oxide ring-4 ring-paper" aria-hidden="true"></span>
+    <span class="timeline-line absolute left-0 top-6 -bottom-6 w-px bg-navi/30" aria-hidden="true"></span>
+    <span class="absolute left-[-5px] top-6 w-3 h-3 rounded-full bg-navi ring-4 ring-paper" aria-hidden="true"></span>
 
     <div class="flex flex-col sm:flex-row gap-4 bg-lift rounded-xl p-4 sm:p-5 border border-ink/10">
         @if($image)
@@ -26,7 +26,7 @@
         <div class="flex-grow min-w-0 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
             <div class="flex flex-col gap-1.5">
                 <h3 class="text-lg font-semibold text-ink leading-snug">{{ $title }}</h3>
-                <span class="text-ember text-sm">{{ $date }}</span>
+                <span class="text-navi text-sm">{{ $date }}</span>
 
                 @if($description)
                     <p class="timeline-description text-mute leading-relaxed text-[0.95rem]">
@@ -35,8 +35,8 @@
                 @endif
 
                 @if($location)
-                    <a href="https://www.google.com/maps/search/?api=1&query={{$location}}" target="_blank" rel="noopener noreferrer nofollow" class="mt-1 inline-flex items-center gap-1 text-mute hover:text-ember w-fit">
-                        <svg class="w-4 h-4 text-ember" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <a href="https://www.google.com/maps/search/?api=1&query={{$location}}" target="_blank" rel="noopener noreferrer nofollow" class="mt-1 inline-flex items-center gap-1 text-mute hover:text-navi w-fit">
+                        <svg class="w-4 h-4 text-navi" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
@@ -55,7 +55,7 @@
                 <div class="flex-shrink-0 flex sm:flex-col gap-2">
                     @if($link)
                         <a href="{{ $link }}" target="_blank" rel="noopener noreferrer nofollow"
-                            class="p-2 bg-oxide hover:bg-ember rounded-lg text-lift transition-colors duration-200"
+                            class="p-2 bg-navi rounded-lg text-lift"
                             aria-label="{{ __('Visit') }} {{ $title }}">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
