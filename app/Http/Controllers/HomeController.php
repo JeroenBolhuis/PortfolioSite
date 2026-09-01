@@ -9,6 +9,14 @@ class HomeController extends Controller
     {
         $education = [
             [
+                'title' => __('Minor Business Administration and Management - Universidad Rey Juan Carlos'),
+                'description' => __('Semester-long minor in Business Administration and Management (Administración y Dirección de Empresas) at Campus Madrid-Vicálvaro.'),
+                'date' => __('September') . ' 2026 - ' . __('January') . ' 2027',
+                'location' => 'Madrid-Vicálvaro, ' . __('Spain'),
+                'image' => '/images/urjc.webp',
+                'link' => 'https://www.urjc.es/estudios/187-administracion-y-direccion-de-empresas'
+            ],
+            [
                 'title' => __('Bachelor Computing Science - Avans University of Applied Sciences'),
                 'description' => __('Studying Computing Science with a focus on practical software development. Working on real-world projects, from web applications to game development, while learning essential programming concepts.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
@@ -97,87 +105,114 @@ class HomeController extends Controller
                 'name' => 'Laravel',
                 'image' => '/images/tech/laravel.svg',
                 'url' => 'https://laravel.com',
-                'color' => '#FF2D20'
+                'color' => '#FF2D20',
+                'what' => __('PHP framework for web apps: routing, Eloquent, queues, and the rest of the backend.'),
             ],
             [
                 'name' => 'Tailwind CSS',
                 'image' => '/images/tech/tailwind.svg',
                 'url' => 'https://tailwindcss.com',
-                'color' => '#38B2AC'
+                'color' => '#38B2AC',
+                'what' => __('Utility-first CSS. Layout and type live in the markup instead of a pile of custom stylesheets.'),
             ],
             [
                 'name' => 'Livewire',
                 'image' => '/images/tech/livewire.svg',
                 'url' => 'https://livewire.laravel.com',
-                'color' => '#FB70A9'
+                'color' => '#FB70A9',
+                'what' => __('Server-driven UI for Laravel. Interactive pages without a separate JavaScript SPA.'),
             ],
             [
                 'name' => 'Alpine.js',
                 'image' => '/images/tech/alpine.svg',
                 'url' => 'https://alpinejs.dev',
-                'color' => '#77C1D2'
+                'color' => '#77C1D2',
+                'what' => __('Small JavaScript library for dropdowns, tabs, hover state, and other UI behavior in Blade.'),
             ],
             [
                 'name' => 'MySQL',
                 'image' => '/images/tech/mysql.svg',
                 'url' => 'https://www.mysql.com',
-                'color' => '#00758F'
+                'color' => '#00758F',
+                'what' => __('Relational database. Tables, joins, and transactions for application data.'),
             ],
             [
                 'name' => 'Vercel',
                 'image' => '/images/tech/vercel.svg',
                 'url' => 'https://vercel.com',
-                'color' => '#808080'
+                'color' => '#808080',
+                'what' => __('Hosting and deploys for frontend and Laravel-on-Vercel setups.'),
             ],
             [
                 'name' => 'Supabase',
                 'image' => '/images/tech/supabase.svg',
                 'url' => 'https://supabase.com',
-                'color' => '#3ECF8E'
+                'color' => '#3ECF8E',
+                'what' => __('Hosted Postgres with auth, storage, and APIs when I do not want to run the database myself.'),
             ],
             [
                 'name' => 'Vite',
                 'image' => '/images/tech/vite.svg',
                 'url' => 'https://vitejs.dev',
-                'color' => '#646CFF'
+                'color' => '#646CFF',
+                'what' => __('Frontend bundler. Compiles CSS and JavaScript with a fast local dev server.'),
             ],
             [
                 'name' => 'GitHub',
                 'image' => '/images/tech/github.svg',
                 'url' => 'https://github.com',
-                'color' => '#808080'
+                'color' => '#808080',
+                'what' => __('Git hosting, pull requests, issues, and Actions.'),
             ],
             [
-                'name' => 'Figma',
-                'image' => '/images/tech/figma.svg',
-                'url' => 'https://figma.com',
-                'color' => '#F24E1E'
+                'name' => 'Jira',
+                'image' => '/images/tech/jira.svg',
+                'url' => 'https://www.atlassian.com/software/jira',
+                'color' => '#2684FF',
+                'what' => __('Issue tracking and sprint boards for planning work with a team.'),
+            ],
+            [
+                'name' => 'Amazon S3',
+                'image' => '/images/tech/s3.svg',
+                'url' => 'https://aws.amazon.com/s3/',
+                'color' => '#569A31',
+                'what' => __('Object storage for files: images, uploads, backups. Talks to Laravel via the S3 disk.'),
             ],
             [
                 'name' => 'Node.js',
                 'image' => '/images/tech/nodejs.svg',
                 'url' => 'https://nodejs.org',
-                'color' => '#339933'
+                'color' => '#339933',
+                'what' => __('JavaScript runtime for tooling: npm, Vite, and frontend build scripts.'),
             ],
             [
                 'name' => 'Redis',
                 'image' => '/images/tech/redis.svg',
                 'url' => 'https://redis.io',
-                'color' => '#C4373A'
+                'color' => '#C4373A',
+                'what' => __('In-memory store for cache, sessions, and queues.'),
             ],
             [
                 'name' => 'PostgreSQL',
                 'image' => '/images/tech/postgresql.svg',
                 'url' => 'https://www.postgresql.org',
-                'color' => '#336791'
+                'color' => '#336791',
+                'what' => __('Relational database with stronger types and JSON than MySQL, often via Supabase.'),
             ],
             [
-                'name' => 'PHPUnit',
-                'image' => '/images/tech/phpunit.svg',
-                'url' => 'https://phpunit.de',
-                'color' => '#952800'
-            ]
-            
+                'name' => 'Pest',
+                'image' => '/images/tech/pest.svg',
+                'url' => 'https://pestphp.com',
+                'color' => '#29BF12',
+                'what' => __('PHP testing framework on top of PHPUnit, with a cleaner syntax for Laravel tests.'),
+            ],
+            [
+                'name' => 'Cloudflare',
+                'image' => '/images/tech/cloudflare.svg',
+                'url' => 'https://www.cloudflare.com',
+                'color' => '#F6821F',
+                'what' => __('DNS, CDN, TLS, and bot protection in front of sites.'),
+            ],
         ];
 
 

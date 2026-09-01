@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
-export default defineConfig({
+const createConfig = (hmrHost) => ({
     base: '/',
     plugins: [
         laravel([
@@ -27,9 +27,19 @@ export default defineConfig({
     },
     server: {
         host: '0.0.0.0',
-        port: 5173,
+        port: process.env.VITE_PORT || 5173,
+        strictPort: false,
+        cors: true,
+        allowedHosts: [hmrHost],
         hmr: {
-            host: 'localhost'
-        }
+            host: hmrHost,
+        },
     },
+});
+
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, process.cwd(), '');
+    const appUrl = new URL(env.APP_URL || 'http://localhost');
+
+    return createConfig(env.VITE_HMR_HOST || appUrl.hostname);
 });

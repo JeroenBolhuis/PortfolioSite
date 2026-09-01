@@ -1,16 +1,26 @@
-// tailwind.config.js
 module.exports = {
   content: [
-    './resources/views/**/*.blade.php',  // Adjust the path if necessary
-    './resources/css/**/*.css',          // Adjust the path if necessary
+    './resources/views/**/*.blade.php',
+    './resources/css/**/*.css',
   ],
   theme: {
     extend: {
       colors: {
-        main: '#0f0214',  // Define your custom color here
+        paper: '#D9C6A5',
+        lift: '#EFE4CF',
+        tile: '#D1BF9F',
+        ink: '#1C1410',
+        mute: '#53463A',
+        rule: '#B59A74',
+        oxide: '#6B2A10',
+        ember: '#8A3514',
+      },
+      fontFamily: {
+        sans: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['Azeret Mono', 'ui-monospace', 'monospace'],
       },
       screens: {
-        xs: '480px', // Define the xs breakpoint
+        xs: '480px',
       },
     },
   },

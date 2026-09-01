@@ -8,7 +8,7 @@
     "Developer Tools Collection": "Ontwikkelaars Gereedschap Collectie",
     "A collection of developer utilities and tools including API testing suite, code formatter, and development environment setup scripts.": "Een verzameling ontwikkelaarstools waaronder API-testsuite, codeformatter en scripts voor het opzetten van ontwikkelomgevingen.",
 
-    "Hi, I'm": "Hallo, ik ben",
+    "Hi, I'm": "Hi, ik ben",
     "A": "Een",
     "full-stack": "full-stack",
     "developer creating modern": "ontwikkelaar die moderne",
@@ -47,7 +47,20 @@
     "Whoops!": "Oeps!",
     "The email field is required.": "Het e-mailveld is verplicht.",
 
+    "About": "Over",
     "About Me": "Over Mij",
+    "Hobbies": "Hobby's",
+    "Internship - Moonly Software": "Stage - Moonly Software",
+    "Send a message and I will get back to you.": "Stuur een bericht en ik neem contact met je op.",
+    "An error occurred while sending your message.": "Er is een fout opgetreden bij het verzenden van je bericht.",
+    "Sending...": "Verzenden...",
+    "Page not found": "Pagina niet gevonden",
+    "Oops! Page Not Found": "Oeps! Pagina niet gevonden",
+    "Back to Home": "Terug naar Home",
+    "Visit": "Bezoek",
+    "View": "Bekijk",
+    "on GitHub": "op GitHub",
+    "Professional photo of Jeroen Bolhuis, full-stack developer": "Professionele foto van Jeroen Bolhuis, full-stack ontwikkelaar",
     "Contact Me": "Neem Contact Op",
     "Jeroen Bolhuis": "Jeroen Bolhuis",
 
@@ -71,8 +84,32 @@
 
     "Present": "Heden",
     "Netherlands": "Nederland",
+    "Spain": "Spanje",
+    "September": "september",
+    "January": "januari",
+    "June": "juni",
+
+    "Minor Business Administration and Management - Universidad Rey Juan Carlos": "Minor Business Administration and Management - Universidad Rey Juan Carlos",
+    "Semester-long minor in Business Administration and Management (Administración y Dirección de Empresas) at Campus Madrid-Vicálvaro.": "Minor van een semester in Business Administration and Management (Administración y Dirección de Empresas) op Campus Madrid-Vicálvaro.",
 
     "Technology stack": "Technologie Stack",
     "See what I use to build my projects": "Zie wat ik gebruik om mijn projecten te bouwen",
+
+    "PHP framework for web apps: routing, Eloquent, queues, and the rest of the backend.": "PHP-framework voor webapps: routing, Eloquent, queues en de rest van de backend.",
+    "Utility-first CSS. Layout and type live in the markup instead of a pile of custom stylesheets.": "Utility-first CSS. Layout en typografie zitten in de markup, geen stapel custom stylesheets.",
+    "Server-driven UI for Laravel. Interactive pages without a separate JavaScript SPA.": "Server-driven UI voor Laravel. Interactieve pagina's zonder aparte JavaScript-SPA.",
+    "Small JavaScript library for dropdowns, tabs, hover state, and other UI behavior in Blade.": "Kleine JavaScript-library voor dropdowns, tabs, hover-state en ander UI-gedrag in Blade.",
+    "Relational database. Tables, joins, and transactions for application data.": "Relationele database. Tabellen, joins en transacties voor applicatiedata.",
+    "Hosting and deploys for frontend and Laravel-on-Vercel setups.": "Hosting en deploys voor frontend en Laravel-op-Vercel setups.",
+    "Hosted Postgres with auth, storage, and APIs when I do not want to run the database myself.": "Gehoste Postgres met auth, storage en APIs als ik de database niet zelf wil draaien.",
+    "Frontend bundler. Compiles CSS and JavaScript with a fast local dev server.": "Frontend bundler. Compileert CSS en JavaScript met een snelle lokale dev-server.",
+    "Git hosting, pull requests, issues, and Actions.": "Git-hosting, pull requests, issues en Actions.",
+    "Issue tracking and sprint boards for planning work with a team.": "Issue tracking en sprintboards om werk met een team te plannen.",
+    "Object storage for files: images, uploads, backups. Talks to Laravel via the S3 disk.": "Object storage voor bestanden: afbeeldingen, uploads, backups. Koppelt aan Laravel via de S3-disk.",
+    "JavaScript runtime for tooling: npm, Vite, and frontend build scripts.": "JavaScript-runtime voor tooling: npm, Vite en frontend build-scripts.",
+    "In-memory store for cache, sessions, and queues.": "In-memory store voor cache, sessions en queues.",
+    "Relational database with stronger types and JSON than MySQL, often via Supabase.": "Relationele database met sterkere types en JSON dan MySQL, vaak via Supabase.",
+    "PHP testing framework on top of PHPUnit, with a cleaner syntax for Laravel tests.": "PHP-testframework bovenop PHPUnit, met een schonere syntax voor Laravel-tests.",
+    "DNS, CDN, TLS, and bot protection in front of sites.": "DNS, CDN, TLS en botbescherming voor sites.",
     "Developed an issue reporting feature for :link, a B2B platform for suppliers and retailers. Enhanced customer support capabilities with faster issue resolution using Laravel and modern web technologies.": "Ontwikkelde een probleemrapportage functie voor :link, een B2B-platform voor leveranciers en retailers. Verbeterde klantenservice mogelijkheden met snellere probleemoplossing met behulp van Laravel en moderne webtechnologieën."
 }
