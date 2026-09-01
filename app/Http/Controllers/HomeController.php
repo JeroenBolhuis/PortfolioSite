@@ -20,7 +20,7 @@ class HomeController extends Controller
                 'title' => __('Bachelor Computing Science - Avans University of Applied Sciences'),
                 'description' => __('Studying Computing Science with a focus on practical software development. Working on real-world projects, from web applications to game development, while learning essential programming concepts.'),
                 'date' => __('September') . ' ' .'2022'. ' - ' . __('Present'),
-                'location' => 'Den Bosch ' . __('Netherlands'),
+                'location' => 'Den Bosch, ' . __('Netherlands'),
                 'image' => '/images/avans.webp',
                 'link' => 'https://www.avans.nl/studeren/opleidingen/informatica/voltijd'
             ],
@@ -28,7 +28,7 @@ class HomeController extends Controller
                 'title' => __('HAVO - Christiaan Huygens Lyceum'),
                 'description' => __('I completed my secondary education with a focus on Nature & Technology (NT) with Economics. This provided me with a solid analytical and mathematical foundation.'),
                 'date' => __('September') . ' ' .'2016'. ' - ' . __('June') . ' ' .'2022',
-                'location' => 'Eindhoven ' . __('Netherlands'),
+                'location' => 'Eindhoven, ' . __('Netherlands'),
                 'image' => '/images/huygens.webp',
                 'link' => 'https://www.huygenslyceum.nl/'
             ]
@@ -81,11 +81,11 @@ class HomeController extends Controller
             [
                 'title' => __('Game Development'),
                 'description' => __('Started coding games at a young age, evolving from Java to JavaScript projects. Found my stride with Unity, and recently transitioned to Godot. Love using my creativity and making a working game from an idea.'),
-                'date' => __('2016') .' - ' . __('Present'),
+                'date' => '2016 - 2025',
                 'image' => '/images/gamedev.webp'
             ],
             [
-                'title' => __('AI Enthusiast'),
+                'title' => __('Building with AI'),
                 'description' => __('Exploring and experimenting with emerging AI tools and technologies. Love discovering new ways these tools can enhance creativity and productivity in everyday projects.'),
                 'date' => __('2023') .' - ' . __('Present'),
                 'image' => '/images/ai.webp'
