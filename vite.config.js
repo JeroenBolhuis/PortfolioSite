@@ -2,7 +2,6 @@ import { defineConfig, loadEnv } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 const createConfig = (hmrHost) => ({
-    base: '/',
     plugins: [
         laravel([
           'resources/css/app.css',

@@ -6,14 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: '#D9C6A5',
-        lift: '#EFE4CF',
+        paper: '#ded1ba',
+        lift: '#ede4d3',
         tile: '#D1BF9F',
         ink: '#1C1410',
         mute: '#53463A',
-        rule: '#B59A74',
-        oxide: '#6B2A10',
-        ember: '#8A3514',
+        navi: '#212c70',
       },
       fontFamily: {
         sans: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],

@@ -11,17 +11,22 @@
         @apply bg-paper text-ink antialiased;
     }
 
+    #hero,
+    #about,
+    #contact {
+        scroll-margin-top: 5rem;
+    }
+
     ::selection {
-        background: #6B2A10;
-        color: #EFE4CF;
+        @apply bg-navi text-lift;
     }
 
     input, textarea {
-        caret-color: #6B2A10;
+        caret-color: theme('colors.navi');
     }
 
     :focus-visible {
-        outline: 2px solid #6B2A10;
+        outline: 2px solid theme('colors.navi');
         outline-offset: 3px;
     }
 
@@ -47,6 +52,55 @@
         box-shadow: 0 1px 2px rgba(28, 20, 16, 0.12);
         border: 1px solid rgba(28, 20, 16, 0.08);
     }
+
+    .privacy-copy h2 {
+        @apply mb-4 text-2xl font-bold text-ink lg:text-3xl;
+    }
+
+    .privacy-copy p {
+        @apply mt-4 max-w-[72ch] leading-7 text-mute;
+    }
+
+    .privacy-copy a {
+        @apply break-words text-navi underline decoration-navi/50 underline-offset-4 hover:decoration-navi;
+    }
+
+    .privacy-copy table {
+        @apply mt-5 min-w-[40rem] border-collapse text-left text-sm;
+    }
+
+    .privacy-copy th,
+    .privacy-copy td {
+        @apply border-b border-ink/15 px-3 py-3 align-top;
+    }
+
+    .privacy-copy th {
+        @apply font-semibold text-ink;
+    }
+
+    .privacy-copy code {
+        @apply font-mono text-xs text-ink;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -58,16 +112,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #8A3514;
+    background: theme('colors.navi');
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6B2A10;
+    background: theme('colors.navi');
 }
 
 .timeline-description a {
-    @apply text-ember underline decoration-ember/50 hover:decoration-ember;
+    @apply text-navi underline decoration-navi/50 hover:decoration-navi;
 }
 
 .tech-tip {

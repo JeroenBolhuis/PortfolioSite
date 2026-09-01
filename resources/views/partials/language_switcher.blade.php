@@ -1,4 +1,5 @@
-<form id="localeform" action="{{ route('setLocale') }}" method="get" class="inline-flex items-center gap-3 px-3 md:px-0">
+<form action="{{ route('setLocale') }}" method="post" class="inline-flex items-center gap-1 px-1 md:px-0" aria-label="{{ __('Choose language') }}">
+    @csrf
     @php
         $currentLocale = Session::get('locale', 'en');
         $locales = [
@@ -7,22 +8,22 @@
         ];
     @endphp
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2">
         @foreach ($locales as $locale => $data)
             <button type="submit"
                 name="locale"
                 value="{{ $locale }}"
-                class="inline-flex items-center justify-center p-0 m-0 w-8 h-[21px] min-h-[21px] max-h-[21px] leading-none text-[0] border-0 bg-transparent appearance-none cursor-pointer overflow-hidden rounded-[2px] transition-opacity duration-200 hover:opacity-100 focus-visible:outline-none
+                class="inline-flex items-center justify-center overflow-hidden leading-none text-[0] border-0 bg-navi appearance-none cursor-pointer rounded-md transition-opacity duration-200 hover:opacity-100 focus-visible:outline-none w-[32px] h-[21px] 
                     {{ $locale === $currentLocale
-                        ? 'shadow-[0_0_0_2px_#6B2A10] focus-visible:shadow-[0_0_0_2px_#6B2A10]'
-                        : 'opacity-40 focus-visible:shadow-[0_0_0_2px_#6B2A10]' }}"
+                        ? 'ring-2 ring-navi focus-visible:ring-2 focus-visible:ring-navi'
+                        : 'opacity-40 focus-visible:ring-2 focus-visible:ring-navi' }}"
                 title="{{ $data['label'] }}"
+                aria-label="{{ $data['label'] }}"
+                aria-pressed="{{ $locale === $currentLocale ? 'true' : 'false' }}"
             >
                 <img src="{{ asset($data['flag']) }}"
-                     alt="{{ $data['label'] }}"
-                     width="32"
-                     height="21"
-                     class="block w-8 h-[21px] max-w-none object-cover">
+                     alt=""
+                     class="block w-full h-full object-cover">
             </button>
         @endforeach
     </div>
